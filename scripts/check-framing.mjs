@@ -1,0 +1,12 @@
+import {PerspectiveCamera,Vector3,Euler} from 'three';
+import {artworks,sampleRoute,destinations,viewingWindows,walls} from '../lib/route.mjs';
+const holds=viewingWindows.map(window=>window[1]);
+const results=[];
+for(const [width,height] of [[1280,720],[805,724]])for(let i=0;i<artworks.length;i++){
+ const camera=new PerspectiveCamera(56,width/height,.08,60),a=artworks[i];let maximum=0;
+ for(let t=destinations[i];t<=holds[i]+.0001;t+=.1){const s=sampleRoute(t);camera.position.fromArray(s.position);camera.lookAt(new Vector3(...s.target));camera.updateMatrixWorld();
+ for(const x of [-a.size[0]/2,a.size[0]/2])for(const y of [-a.size[1]/2,a.size[1]/2]){const p=new Vector3(x,y,0).applyEuler(new Euler(...a.rotation)).add(new Vector3(...a.position)).project(camera);maximum=Math.max(maximum,Math.abs(p.x),Math.abs(p.y));}}
+ results.push({viewport:[width,height],artwork:i+1,maximumNDC:Number(maximum.toFixed(3)),pass:maximum<.94});
+}
+const mounting=artworks.map((a,index)=>{const rotation=new Euler(...a.rotation),normal=new Vector3(0,0,1).applyEuler(rotation),axis=Math.abs(normal.x)>.9?0:2,tangent=axis===0?2:0,sign=normal.getComponent(axis)>0?1:-1;const host=walls.find(w=>Math.abs(a.position[axis]-(sign>0?w.max[axis]:w.min[axis]))<.15&&a.position[tangent]-(a.size[0]+.035)/2>=w.min[tangent]&&a.position[tangent]+(a.size[0]+.035)/2<=w.max[tangent]&&a.position[1]-(a.size[1]+.035)/2>=w.min[1]&&a.position[1]+(a.size[1]+.035)/2<=w.max[1]);return {artwork:index+1,host:host?.name,pass:!!host};});
+const pass=results.every(r=>r.pass)&&mounting.every(r=>r.pass);console.log(JSON.stringify({pass,results,mounting},null,2));if(!pass)process.exitCode=1;

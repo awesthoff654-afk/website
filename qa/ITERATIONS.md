@@ -75,4 +75,10 @@ The user's plan supersedes the provisional parallel offset layout. Two separate 
 
 Artwork 04 is centered on the entrance-facing wall. The camera's continuous walking route now goes around the north end of the longitudinal wall before crossing to the east side. Its full route lasts 123 seconds and returns toward the entrance; the last artwork is viewed from approximately 2.4 m away.
 
-Dense geometry validation: **123,001 samples PASS**, 0.22 m camera clearance sphere, minimum actual surface separation 0.5717 m. The production build and live verification are pending at the time of this entry. No visual score is assigned to this iteration; the 9.2 acceptance gate remains unmet.
+Dense geometry validation: **123,001 samples PASS**, 0.22 m camera clearance sphere, minimum actual surface separation 0.5717 m. Subsequent production build and Technical Gate passed; independent visual review scored 7.7/10 (see visual-iteration-5.md). The user subsequently assessed the same presentation at **6.5/10**, establishing the calibration baseline for future visual comparison. Preserve both assessments; deployment and technical stability are not evidence of visual acceptance.
+
+## Iteration 6 — in progress
+
+User priorities: replace office-like ceiling with White Cube architectural recesses; remove About the space; improve painting-frame antialiasing; expand to ten artworks and complete the whole exhibition. Rebuilt ceiling uses actual apertures with white recessed reveals, broad white bands and luminous diffusers; dark trim plates and full ceiling-grid seams removed. Static indirect lightmaps use 96 cosine-weighted samples and four diffuse bounces; these are approximate baked lighting, not a full dynamic GI system. Planar floor reflection distortion/depth attenuation corrected. Artwork receives canvas normal/roughness detail and typographic labels. High quality adds 4-sample MSAA plus SMAA at up to 1.5 DPR. Full route now includes ten destinations and genuine initial withdrawals.
+
+Production build/types pass. Technical runtime gate and independent visual review pending. No score assigned. Acceptance remains 9.2 overall and all critical categories at least 8.8, calibrated against the user's 6.5 baseline.

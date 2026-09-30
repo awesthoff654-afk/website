@@ -1,0 +1,62 @@
+[
+  {
+    "time": 147.77760000005364,
+    "playing": true,
+    "speed": 12,
+    "ready": true,
+    "fps": 19,
+    "frames": 226,
+    "complete": false,
+    "phase": "Hold",
+    "artwork": 2,
+    "collisions": [],
+    "error": "",
+    "quality": "high",
+    "duration": 337,
+    "camera": [
+      2.25,
+      1.6800000000000002,
+      -0.8
+    ]
+  },
+  {
+    "time": 337,
+    "playing": false,
+    "speed": 12,
+    "ready": true,
+    "fps": 17,
+    "frames": 584,
+    "complete": true,
+    "phase": "Complete",
+    "artwork": -1,
+    "collisions": [],
+    "error": "",
+    "quality": "high",
+    "duration": 337,
+    "camera": [
+      3.65,
+      1.68,
+      4.35
+    ]
+  },
+  {
+    "time": 337,
+    "playing": false,
+    "speed": 12,
+    "ready": true,
+    "fps": 30,
+    "frames": 930,
+    "complete": true,
+    "phase": "Complete",
+    "artwork": -1,
+    "collisions": [],
+    "error": "",
+    "quality": "balanced",
+    "duration": 337,
+    "camera": [
+      3.65,
+      1.68,
+      4.35
+    ]
+  }
+]

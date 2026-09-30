@@ -1,10 +1,10 @@
 # VÆST — Space between
 
-A local-first Next.js / React Three Fiber exhibition. Original 10 × 10 × 4 m gallery, two separate perpendicular exhibition walls aligned to the user's plan, four physically scaled placeholder canvases and a 123-second cinematic route. The transverse wall faces the entrance; the longitudinal wall sits behind it, with a 1.55 m open passage between them. Architectural character references White Cube Bermondsey's white walls, polished grey concrete and recessed ceiling diffusers, without reproducing its plan.
+A local-first Next.js / React Three Fiber exhibition. Original 10 × 10 × 4 m gallery, two separate perpendicular exhibition walls aligned to the user's plan, ten physically scaled placeholder canvases and a 337-second cinematic route. The transverse wall faces the entrance; the longitudinal wall sits behind it, with a 1.55 m open passage between them. Architectural character references White Cube Bermondsey's white walls, polished grey concrete and recessed ceiling diffusers, without reproducing its plan.
 
 ## Run
 
-Use Node.js 20.9+ and pnpm:
+Validated with Node.js 24.19.0 and pnpm 11.25.0:
 
 ```sh
 pnpm install --frozen-lockfile
@@ -26,6 +26,6 @@ pnpm start
 - `lib/route.mjs`: camera route, artwork positions and architecture collision boxes; shared by rendering and the deterministic route checker.
 - `scripts/check-route.mjs`: samples the camera every 0.01 seconds with a 0.22 m clearance sphere.
 
-The camera eases between explicit safe corridor points. It approaches each work, settles approximately 2 m away, slowly pans, holds, withdraws and travels to the next destination. Artwork buttons seek to the corresponding settle point. Rendering uses ACES exposure, environment illumination, diffused ceiling lights, shadow maps, screen-space contact occlusion, blurred planar floor reflections and SMAA.
+The camera eases between explicit safe corridor points. It approaches each work, settles approximately 2 m away, slowly pans, holds, withdraws and travels to the next destination. Artwork buttons seek to the corresponding settle point. Rendering uses ACES exposure, environment illumination, diffused ceiling lights, shadow maps, screen-space contact occlusion, blurred planar floor reflections, approximate baked diffuse indirect lighting, and SMAA with multisample antialiasing in high quality.
 
 See `ARTWORKS.md` to replace placeholders and `DEPLOYMENT.md` for GitHub → Vercel setup. Review results and iteration notes live in `qa/`. Render quality acceptance remains subject to actual independent technical and visual review; no score is implied by this README.

@@ -1,0 +1,42 @@
+[
+  {
+    "time": 188.36039999994628,
+    "playing": true,
+    "speed": 12,
+    "ready": true,
+    "fps": 25,
+    "frames": 424,
+    "complete": false,
+    "phase": "Approach",
+    "artwork": 6,
+    "collisions": [],
+    "error": "",
+    "quality": "high",
+    "duration": 337,
+    "camera": [
+      3.665260967913624,
+      1.6800000000000002,
+      1.0029305317743802
+    ]
+  },
+  {
+    "time": 337,
+    "playing": false,
+    "speed": 12,
+    "ready": true,
+    "fps": 25,
+    "frames": 1084,
+    "complete": true,
+    "phase": "Complete",
+    "artwork": -1,
+    "collisions": [],
+    "error": "",
+    "quality": "high",
+    "duration": 337,
+    "camera": [
+      3.65,
+      1.68,
+      3.9
+    ]
+  }
+]

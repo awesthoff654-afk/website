@@ -5,8 +5,8 @@ const boxes=[...walls,
  {name:'floor',min:[-5.2,-.01,-5.2],max:[5.2,0,5.2]},
  {name:'bench',min:[2.7,0,3.2],max:[4.1,.5375,3.8]},
  ...artworks.map((a,i)=>{
-  // Conservative union of canvas and wood support; artworks rotate by ±90° or 0°.
-  const half=a.rotation[1]?[.09,(a.size[1]+.06)/2,(a.size[0]+.06)/2]:[(a.size[0]+.06)/2,(a.size[1]+.06)/2,.09];
+  // Conservative union of canvas and wood support; artworks rotate by multiples of 90°.
+  const half=Math.abs(Math.sin(a.rotation[1]))>.5?[.09,(a.size[1]+.06)/2,(a.size[0]+.06)/2]:[(a.size[0]+.06)/2,(a.size[1]+.06)/2,.09];
   return {name:`artwork-${i+1}`,min:a.position.map((v,j)=>v-half[j]),max:a.position.map((v,j)=>v+half[j])};
  })];
 let minimum=Infinity,closest=null;
