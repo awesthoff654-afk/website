@@ -2,3 +2,7 @@
 
 .title{transition:opacity 1.8s ease}.title.departed{opacity:0}
 .route{gap:12px}.progress{width:80px}.route button{font-variant-numeric:tabular-nums}@media(max-width:700px){.route{gap:12px}.route .progress{display:none}}
+
+.brand{display:block;position:relative;width:132px;height:49px;overflow:hidden;flex-shrink:0}.brand img{position:absolute;width:245px;height:auto;max-width:none;left:-56px;top:-60px;mix-blend-mode:multiply}@media(max-width:700px){.brand{width:100px;height:37px}.brand img{width:185px;left:-42px;top:-45px}}
+
+.transport .step{font-size:10px}.transport button:disabled{opacity:.3;cursor:default}

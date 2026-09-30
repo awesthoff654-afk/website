@@ -79,6 +79,22 @@ Dense geometry validation: **123,001 samples PASS**, 0.22 m camera clearance sph
 
 ## Iteration 6 — in progress
 
-User priorities: replace office-like ceiling with White Cube architectural recesses; remove About the space; improve painting-frame antialiasing; expand to ten artworks and complete the whole exhibition. Rebuilt ceiling uses actual apertures with white recessed reveals, broad white bands and luminous diffusers; dark trim plates and full ceiling-grid seams removed. Static indirect lightmaps use 96 cosine-weighted samples and four diffuse bounces; these are approximate baked lighting, not a full dynamic GI system. Planar floor reflection distortion/depth attenuation corrected. Artwork receives canvas normal/roughness detail and typographic labels. High quality adds 4-sample MSAA plus SMAA at up to 1.5 DPR. Full route now includes ten destinations and genuine initial withdrawals.
+User priorities: replace office-like ceiling with White Cube architectural recesses; remove About the space; improve painting-frame antialiasing; expand to ten artworks and complete the whole exhibition. Rebuilt ceiling uses actual apertures with white recessed reveals, broad white bands and luminous diffusers; dark trim plates and full ceiling-grid seams removed. Static indirect lightmaps use 96 cosine-weighted samples and four diffuse bounces; these are approximate baked lighting, not a full dynamic GI system. Planar floor reflection distortion/depth attenuation corrected. Artwork receives canvas normal/roughness detail and typographic labels. Final revision 6c uses 2-sample MSAA plus SMAA at DPR 1 to reduce rendering cost. Full route now includes ten destinations and genuine initial withdrawals.
 
 Production build/types pass. Technical runtime gate and independent visual review pending. No score assigned. Acceptance remains 9.2 overall and all critical categories at least 8.8, calibrated against the user's 6.5 baseline.
+
+### Iteration 6 deployment and limitations
+
+Initial runtime revisions failed performance: high 18–19 fps (6), then 25–28 fps (6b). Revision 6c production build and TypeScript validation passed. On the user’s explicit request it was deployed before completing the runtime gate: GitHub commit 7e81e394fc2d98e1b865436444e87a37fac3ad18, Vercel success, public https://www.vaest.art independently opened and confirmed ten artwork controls, 337-second duration, ready=true, high quality 30 fps at startup, and no logged errors. This startup observation is not a full-route Technical Gate PASS. No visual score or 9.2 acceptance claimed.
+
+## Iteration 7 — user-directed corrections in progress
+
+Match ceiling to White Cube reference, remove white floor lines and shift concrete from brown to neutral grey while preserving its existing sheen, eliminate wall-floor and wall-ceiling junction shading, brighten walls, increase antialiasing, remove hero count sentence and integrate supplied real logo. Full technical gate and independent visual review must follow the frozen build.
+
+### Iteration 7 layout expansion
+
+User requested a smaller entrance room leading into the larger main gallery through a central doorway, retaining the two existing exhibition dividers and ten artworks. Implementation resumes after the account usage reset. Proposed dimensions preserve the 10 × 10 m main gallery and add an approximately 10 × 3 m entrance vestibule, both 4 m high. Camera route and collision checks must be rebuilt for this layout; prior one-room checks cannot establish acceptance. Latest floor instruction is neutral grey, preserving the current sheen.
+
+### Iteration 7 technical result — PASS
+
+Frozen production build and types pass. Independent Technical Gate report: qa/technical-iteration-7.md. Dense 367,001 geometry samples, all ten mounts and 20 framing cases pass; minimum separation 0.4376 m. Root live production-browser evidence at 1280 × 720: complete 367-second tours in high and balanced modes returned to [0,1.68,7.4], 60 fps, no errors or collisions. Back/Next walked all ten destinations in order and paused; first/last boundaries, resume, restart and stable pause passed. Independent gate explicitly distinguishes root browser evidence from its own static inspection. Visual review pending; no visual score assigned. User authorizes deploying requested technically passing updates before visual acceptance.

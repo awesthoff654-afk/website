@@ -1,0 +1,381 @@
+{
+  "provenance": "Root live in-app browser, production build, 1280×720. Independent gate assesses this raw evidence; not cross-device testing.",
+  "route": [
+    {
+      "time": 0.23219999999925492,
+      "playing": true,
+      "speed": 12,
+      "ready": true,
+      "fps": 60,
+      "frames": 1070,
+      "complete": false,
+      "phase": "Entrance",
+      "artwork": -1,
+      "collisions": [],
+      "error": "",
+      "quality": "high",
+      "duration": 367,
+      "camera": [
+        0,
+        1.68,
+        7.395932987681357
+      ]
+    },
+    {
+      "time": 294.84180000000754,
+      "playing": true,
+      "speed": 12,
+      "ready": true,
+      "fps": 60,
+      "frames": 2543,
+      "complete": false,
+      "phase": "Approach",
+      "artwork": 8,
+      "collisions": [],
+      "error": "",
+      "quality": "high",
+      "duration": 367,
+      "camera": [
+        -2.8061848059230425,
+        1.68,
+        0.6778779503203356
+      ]
+    },
+    {
+      "time": 367,
+      "playing": false,
+      "speed": 12,
+      "ready": true,
+      "fps": 60,
+      "frames": 3737,
+      "complete": true,
+      "phase": "Complete",
+      "artwork": -1,
+      "collisions": [],
+      "error": "",
+      "quality": "high",
+      "duration": 367,
+      "camera": [
+        0,
+        1.68,
+        7.4
+      ]
+    },
+    {
+      "time": 367,
+      "playing": false,
+      "speed": 12,
+      "ready": true,
+      "fps": 60,
+      "frames": 7687,
+      "complete": true,
+      "phase": "Complete",
+      "artwork": -1,
+      "collisions": [],
+      "error": "",
+      "quality": "balanced",
+      "duration": 367,
+      "camera": [
+        0,
+        1.68,
+        7.4
+      ]
+    }
+  ],
+  "numberedButtons": [
+    {
+      "title": "Sediment / 01",
+      "diagnostics": {
+        "time": 29.825200000017887,
+        "playing": true,
+        "speed": 12,
+        "ready": true,
+        "fps": 60,
+        "frames": 4530,
+        "complete": false,
+        "phase": "Slow pan",
+        "artwork": 0,
+        "collisions": [],
+        "error": "",
+        "quality": "high",
+        "duration": 367,
+        "camera": [
+          -2.342001729321321,
+          1.6800000000000002,
+          0.14848621095431844
+        ]
+      }
+    },
+    {
+      "title": "Weather / 02",
+      "diagnostics": {
+        "time": 57,
+        "playing": true,
+        "speed": 12,
+        "ready": true,
+        "fps": 60,
+        "frames": 4538,
+        "complete": false,
+        "phase": "Slow pan",
+        "artwork": 0,
+        "collisions": [],
+        "error": "",
+        "quality": "high",
+        "duration": 367,
+        "camera": [
+          -2.7,
+          1.68,
+          -2.7
+        ]
+      }
+    },
+    {
+      "title": "After the rain",
+      "diagnostics": {
+        "time": 87.18079999998211,
+        "playing": true,
+        "speed": 12,
+        "ready": true,
+        "fps": 60,
+        "frames": 4561,
+        "complete": false,
+        "phase": "Slow pan",
+        "artwork": 1,
+        "collisions": [],
+        "error": "",
+        "quality": "high",
+        "duration": 367,
+        "camera": [
+          -2.238514350471074,
+          1.68,
+          -2.3576640237777275
+        ]
+      }
+    },
+    {
+      "title": "Blue interval",
+      "diagnostics": {
+        "time": 121,
+        "playing": true,
+        "speed": 12,
+        "ready": true,
+        "fps": 60,
+        "frames": 4572,
+        "complete": false,
+        "phase": "Slow pan",
+        "artwork": 1,
+        "collisions": [],
+        "error": "",
+        "quality": "high",
+        "duration": 367,
+        "camera": [
+          2.1,
+          1.68,
+          -2.4
+        ]
+      }
+    },
+    {
+      "title": "Warm silence",
+      "diagnostics": {
+        "time": 150.38760000000894,
+        "playing": true,
+        "speed": 12,
+        "ready": true,
+        "fps": 60,
+        "frames": 4591,
+        "complete": false,
+        "phase": "Slow pan",
+        "artwork": 2,
+        "collisions": [],
+        "error": "",
+        "quality": "high",
+        "duration": 367,
+        "camera": [
+          2.2295913170587176,
+          1.68,
+          -1.8106066249292025
+        ]
+      }
+    },
+    {
+      "title": "A second horizon",
+      "diagnostics": {
+        "time": 179,
+        "playing": true,
+        "speed": 12,
+        "ready": true,
+        "fps": 60,
+        "frames": 4606,
+        "complete": false,
+        "phase": "Slow pan",
+        "artwork": 2,
+        "collisions": [],
+        "error": "",
+        "quality": "high",
+        "duration": 367,
+        "camera": [
+          2.3,
+          1.68,
+          -1.65
+        ]
+      }
+    },
+    {
+      "title": "Late warmth",
+      "diagnostics": {
+        "time": 213,
+        "playing": true,
+        "speed": 12,
+        "ready": true,
+        "fps": 60,
+        "frames": 4623,
+        "complete": false,
+        "phase": "Slow pan",
+        "artwork": 9,
+        "collisions": [],
+        "error": "",
+        "quality": "high",
+        "duration": 367,
+        "camera": [
+          2.65,
+          1.68,
+          2.45
+        ]
+      }
+    },
+    {
+      "title": "A field of light",
+      "diagnostics": {
+        "time": 244.4035999999642,
+        "playing": true,
+        "speed": 12,
+        "ready": true,
+        "fps": 60,
+        "frames": 4652,
+        "complete": false,
+        "phase": "Slow pan",
+        "artwork": 3,
+        "collisions": [],
+        "error": "",
+        "quality": "high",
+        "duration": 367,
+        "camera": [
+          0.036700126353341384,
+          1.68,
+          4.562911929392374
+        ]
+      }
+    },
+    {
+      "title": "The quiet edge",
+      "diagnostics": {
+        "time": 273,
+        "playing": true,
+        "speed": 12,
+        "ready": true,
+        "fps": 60,
+        "frames": 4657,
+        "complete": false,
+        "phase": "Slow pan",
+        "artwork": 3,
+        "collisions": [],
+        "error": "",
+        "quality": "high",
+        "duration": 367,
+        "camera": [
+          -3.25,
+          1.68,
+          2.45
+        ]
+      }
+    },
+    {
+      "title": "Negative space",
+      "diagnostics": {
+        "time": 303.78560000000886,
+        "playing": true,
+        "speed": 12,
+        "ready": true,
+        "fps": 60,
+        "frames": 4683,
+        "complete": false,
+        "phase": "Slow pan",
+        "artwork": 8,
+        "collisions": [],
+        "error": "",
+        "quality": "high",
+        "duration": 367,
+        "camera": [
+          -2.2713160073215284,
+          1.68,
+          -1.1536743976560278
+        ]
+      }
+    }
+  ],
+  "manualNavigationSnapshots": [
+    "- main:\n  - link \"VÆST home\":\n    - /url: /\n    - img \"VÆST\"\n  - text: EXHIBITION 001\n  - generic: SPACE BETWEEN\n  - button \"Balanced ↗\"\n  - text: A STUDY IN STILLNESS\n  - heading \"Space between.\" [level=1]:\n    - text: Space\n    - text: between.\n  - text: 02 / 10\n  - heading \"Weather / 02\" [level=2]\n  - paragraph: Oil and chalk on linen · 2026\n  - button \"Resume tour\": ▶\n  - button \"Restart tour\": ↺\n  - button \"Previous artwork\": Back\n  - button \"Next artwork\" [active]: Next\n  - generic: Settle\n  - button \"View Sediment / 01\": \"01\"\n  - button \"View Weather / 02\": \"02\"\n  - button \"View After the rain\": \"03\"\n  - button \"View Blue interval\": \"04\"\n  - button \"View Warm silence\": \"05\"\n  - button \"View A second horizon\": \"06\"\n  - button \"View Late warmth\": \"07\"\n  - button \"View A field of light\": \"08\"\n  - button \"View The quiet edge\": \"09\"\n  - button \"View Negative space\": \"10\"\n  - complementary:\n    - text: Gallery diagnostics\n    - paragraph: 10 × 10 m main gallery + 10 × 3 m entrance · 4 m high · 2.4 m connecting doorway\n    - generic: \"{ \\\"time\\\": 57, \\\"playing\\\": false, \\\"speed\\\": 1, \\\"ready\\\": true, \\\"fps\\\": 60, \\\"frames\\\": 8390, \\\"complete\\\": false, \\\"phase\\\": \\\"Settle\\\", \\\"artwork\\\": 4, \\\"collisions\\\": [], \\\"error\\\": \\\"\\\", \\\"quality\\\": \\\"balanced\\\", \\\"duration\\\": 367, \\\"camera\\\": [ -2.7, 1.68, -2.7 ] }\"\n    - text: Tour speed\n    - combobox \"Tour speed\":\n      - option \"1 ×\" [selected]\n      - option \"4 ×\"\n      - option \"12 ×\"\n    - generic: Placeholder artwork. Architecture inspired by the neutral, top-lit galleries of White Cube Bermondsey; an original 100 m² plan.\n- alert",
+    "- main:\n  - link \"VÆST home\":\n    - /url: /\n    - img \"VÆST\"\n  - text: EXHIBITION 001\n  - generic: SPACE BETWEEN\n  - button \"Balanced ↗\"\n  - text: A STUDY IN STILLNESS\n  - heading \"Space between.\" [level=1]:\n    - text: Space\n    - text: between.\n  - text: 03 / 10\n  - heading \"After the rain\" [level=2]\n  - paragraph: Oil and graphite on linen · 2026\n  - button \"Resume tour\": ▶\n  - button \"Restart tour\": ↺\n  - button \"Previous artwork\": Back\n  - button \"Next artwork\" [active]: Next\n  - generic: Settle\n  - button \"View Sediment / 01\": \"01\"\n  - button \"View Weather / 02\": \"02\"\n  - button \"View After the rain\": \"03\"\n  - button \"View Blue interval\": \"04\"\n  - button \"View Warm silence\": \"05\"\n  - button \"View A second horizon\": \"06\"\n  - button \"View Late warmth\": \"07\"\n  - button \"View A field of light\": \"08\"\n  - button \"View The quiet edge\": \"09\"\n  - button \"View Negative space\": \"10\"\n  - complementary:\n    - text: Gallery diagnostics\n    - paragraph: 10 × 10 m main gallery + 10 × 3 m entrance · 4 m high · 2.4 m connecting doorway\n    - generic: \"{ \\\"time\\\": 86, \\\"playing\\\": false, \\\"speed\\\": 1, \\\"ready\\\": true, \\\"fps\\\": 60, \\\"frames\\\": 8398, \\\"complete\\\": false, \\\"phase\\\": \\\"Settle\\\", \\\"artwork\\\": 1, \\\"collisions\\\": [], \\\"error\\\": \\\"\\\", \\\"quality\\\": \\\"balanced\\\", \\\"duration\\\": 367, \\\"camera\\\": [ -2.35, 1.68, -2.4 ] }\"\n    - text: Tour speed\n    - combobox \"Tour speed\":\n      - option \"1 ×\" [selected]\n      - option \"4 ×\"\n      - option \"12 ×\"\n    - generic: Placeholder artwork. Architecture inspired by the neutral, top-lit galleries of White Cube Bermondsey; an original 100 m² plan.\n- alert",
+    "- main:\n  - link \"VÆST home\":\n    - /url: /\n    - img \"VÆST\"\n  - text: EXHIBITION 001\n  - generic: SPACE BETWEEN\n  - button \"Balanced ↗\"\n  - text: A STUDY IN STILLNESS\n  - heading \"Space between.\" [level=1]:\n    - text: Space\n    - text: between.\n  - text: 04 / 10\n  - heading \"Blue interval\" [level=2]\n  - paragraph: Oil on cotton canvas · 2026\n  - button \"Resume tour\": ▶\n  - button \"Restart tour\": ↺\n  - button \"Previous artwork\": Back\n  - button \"Next artwork\" [active]: Next\n  - generic: Settle\n  - button \"View Sediment / 01\": \"01\"\n  - button \"View Weather / 02\": \"02\"\n  - button \"View After the rain\": \"03\"\n  - button \"View Blue interval\": \"04\"\n  - button \"View Warm silence\": \"05\"\n  - button \"View A second horizon\": \"06\"\n  - button \"View Late warmth\": \"07\"\n  - button \"View A field of light\": \"08\"\n  - button \"View The quiet edge\": \"09\"\n  - button \"View Negative space\": \"10\"\n  - complementary:\n    - text: Gallery diagnostics\n    - paragraph: 10 × 10 m main gallery + 10 × 3 m entrance · 4 m high · 2.4 m connecting doorway\n    - generic: \"{ \\\"time\\\": 121, \\\"playing\\\": false, \\\"speed\\\": 1, \\\"ready\\\": true, \\\"fps\\\": 60, \\\"frames\\\": 8421, \\\"complete\\\": false, \\\"phase\\\": \\\"Settle\\\", \\\"artwork\\\": 5, \\\"collisions\\\": [], \\\"error\\\": \\\"\\\", \\\"quality\\\": \\\"balanced\\\", \\\"duration\\\": 367, \\\"camera\\\": [ 2.1, 1.68, -2.4 ] }\"\n    - text: Tour speed\n    - combobox \"Tour speed\":\n      - option \"1 ×\" [selected]\n      - option \"4 ×\"\n      - option \"12 ×\"\n    - generic: Placeholder artwork. Architecture inspired by the neutral, top-lit galleries of White Cube Bermondsey; an original 100 m² plan.\n- alert",
+    "- main:\n  - link \"VÆST home\":\n    - /url: /\n    - img \"VÆST\"\n  - text: EXHIBITION 001\n  - generic: SPACE BETWEEN\n  - button \"Balanced ↗\"\n  - text: A STUDY IN STILLNESS\n  - heading \"Space between.\" [level=1]:\n    - text: Space\n    - text: between.\n  - text: 05 / 10\n  - heading \"Warm silence\" [level=2]\n  - paragraph: Pigment and wax on panel · 2026\n  - button \"Resume tour\": ▶\n  - button \"Restart tour\": ↺\n  - button \"Previous artwork\": Back\n  - button \"Next artwork\" [active]: Next\n  - generic: Settle\n  - button \"View Sediment / 01\": \"01\"\n  - button \"View Weather / 02\": \"02\"\n  - button \"View After the rain\": \"03\"\n  - button \"View Blue interval\": \"04\"\n  - button \"View Warm silence\": \"05\"\n  - button \"View A second horizon\": \"06\"\n  - button \"View Late warmth\": \"07\"\n  - button \"View A field of light\": \"08\"\n  - button \"View The quiet edge\": \"09\"\n  - button \"View Negative space\": \"10\"\n  - complementary:\n    - text: Gallery diagnostics\n    - paragraph: 10 × 10 m main gallery + 10 × 3 m entrance · 4 m high · 2.4 m connecting doorway\n    - generic: \"{ \\\"time\\\": 150, \\\"playing\\\": false, \\\"speed\\\": 1, \\\"ready\\\": true, \\\"fps\\\": 60, \\\"frames\\\": 8432, \\\"complete\\\": false, \\\"phase\\\": \\\"Settle\\\", \\\"artwork\\\": 2, \\\"collisions\\\": [], \\\"error\\\": \\\"\\\", \\\"quality\\\": \\\"balanced\\\", \\\"duration\\\": 367, \\\"camera\\\": [ 2.25, 1.68, -1.85 ] }\"\n    - text: Tour speed\n    - combobox \"Tour speed\":\n      - option \"1 ×\" [selected]\n      - option \"4 ×\"\n      - option \"12 ×\"\n    - generic: Placeholder artwork. Architecture inspired by the neutral, top-lit galleries of White Cube Bermondsey; an original 100 m² plan.\n- alert",
+    "- main:\n  - link \"VÆST home\":\n    - /url: /\n    - img \"VÆST\"\n  - text: EXHIBITION 001\n  - generic: SPACE BETWEEN\n  - button \"Balanced ↗\"\n  - text: A STUDY IN STILLNESS\n  - heading \"Space between.\" [level=1]:\n    - text: Space\n    - text: between.\n  - text: 06 / 10\n  - heading \"A second horizon\" [level=2]\n  - paragraph: Oil and graphite on linen · 2026\n  - button \"Resume tour\": ▶\n  - button \"Restart tour\": ↺\n  - button \"Previous artwork\": Back\n  - button \"Next artwork\" [active]: Next\n  - generic: Settle\n  - button \"View Sediment / 01\": \"01\"\n  - button \"View Weather / 02\": \"02\"\n  - button \"View After the rain\": \"03\"\n  - button \"View Blue interval\": \"04\"\n  - button \"View Warm silence\": \"05\"\n  - button \"View A second horizon\": \"06\"\n  - button \"View Late warmth\": \"07\"\n  - button \"View A field of light\": \"08\"\n  - button \"View The quiet edge\": \"09\"\n  - button \"View Negative space\": \"10\"\n  - complementary:\n    - text: Gallery diagnostics\n    - paragraph: 10 × 10 m main gallery + 10 × 3 m entrance · 4 m high · 2.4 m connecting doorway\n    - generic: \"{ \\\"time\\\": 179, \\\"playing\\\": false, \\\"speed\\\": 1, \\\"ready\\\": true, \\\"fps\\\": 60, \\\"frames\\\": 8451, \\\"complete\\\": false, \\\"phase\\\": \\\"Settle\\\", \\\"artwork\\\": 9, \\\"collisions\\\": [], \\\"error\\\": \\\"\\\", \\\"quality\\\": \\\"balanced\\\", \\\"duration\\\": 367, \\\"camera\\\": [ 2.3, 1.68, -1.65 ] }\"\n    - text: Tour speed\n    - combobox \"Tour speed\":\n      - option \"1 ×\" [selected]\n      - option \"4 ×\"\n      - option \"12 ×\"\n    - generic: Placeholder artwork. Architecture inspired by the neutral, top-lit galleries of White Cube Bermondsey; an original 100 m² plan.\n- alert",
+    "- main:\n  - link \"VÆST home\":\n    - /url: /\n    - img \"VÆST\"\n  - text: EXHIBITION 001\n  - generic: SPACE BETWEEN\n  - button \"Balanced ↗\"\n  - text: A STUDY IN STILLNESS\n  - heading \"Space between.\" [level=1]:\n    - text: Space\n    - text: between.\n  - text: 07 / 10\n  - heading \"Late warmth\" [level=2]\n  - paragraph: Pigment and wax on linen · 2026\n  - button \"Resume tour\": ▶\n  - button \"Restart tour\": ↺\n  - button \"Previous artwork\": Back\n  - button \"Next artwork\" [active]: Next\n  - generic: Settle\n  - button \"View Sediment / 01\": \"01\"\n  - button \"View Weather / 02\": \"02\"\n  - button \"View After the rain\": \"03\"\n  - button \"View Blue interval\": \"04\"\n  - button \"View Warm silence\": \"05\"\n  - button \"View A second horizon\": \"06\"\n  - button \"View Late warmth\": \"07\"\n  - button \"View A field of light\": \"08\"\n  - button \"View The quiet edge\": \"09\"\n  - button \"View Negative space\": \"10\"\n  - complementary:\n    - text: Gallery diagnostics\n    - paragraph: 10 × 10 m main gallery + 10 × 3 m entrance · 4 m high · 2.4 m connecting doorway\n    - generic: \"{ \\\"time\\\": 213, \\\"playing\\\": false, \\\"speed\\\": 1, \\\"ready\\\": true, \\\"fps\\\": 60, \\\"frames\\\": 8481, \\\"complete\\\": false, \\\"phase\\\": \\\"Settle\\\", \\\"artwork\\\": 6, \\\"collisions\\\": [], \\\"error\\\": \\\"\\\", \\\"quality\\\": \\\"balanced\\\", \\\"duration\\\": 367, \\\"camera\\\": [ 2.65, 1.68, 2.45 ] }\"\n    - text: Tour speed\n    - combobox \"Tour speed\":\n      - option \"1 ×\" [selected]\n      - option \"4 ×\"\n      - option \"12 ×\"\n    - generic: Placeholder artwork. Architecture inspired by the neutral, top-lit galleries of White Cube Bermondsey; an original 100 m² plan.\n- alert",
+    "- main:\n  - link \"VÆST home\":\n    - /url: /\n    - img \"VÆST\"\n  - text: EXHIBITION 001\n  - generic: SPACE BETWEEN\n  - button \"Balanced ↗\"\n  - text: A STUDY IN STILLNESS\n  - heading \"Space between.\" [level=1]:\n    - text: Space\n    - text: between.\n  - text: 08 / 10\n  - heading \"A field of light\" [level=2]\n  - paragraph: Acrylic on cotton canvas · 2026\n  - button \"Resume tour\": ▶\n  - button \"Restart tour\": ↺\n  - button \"Previous artwork\": Back\n  - button \"Next artwork\" [active]: Next\n  - generic: Settle\n  - button \"View Sediment / 01\": \"01\"\n  - button \"View Weather / 02\": \"02\"\n  - button \"View After the rain\": \"03\"\n  - button \"View Blue interval\": \"04\"\n  - button \"View Warm silence\": \"05\"\n  - button \"View A second horizon\": \"06\"\n  - button \"View Late warmth\": \"07\"\n  - button \"View A field of light\": \"08\"\n  - button \"View The quiet edge\": \"09\"\n  - button \"View Negative space\": \"10\"\n  - complementary:\n    - text: Gallery diagnostics\n    - paragraph: 10 × 10 m main gallery + 10 × 3 m entrance · 4 m high · 2.4 m connecting doorway\n    - generic: \"{ \\\"time\\\": 242, \\\"playing\\\": false, \\\"speed\\\": 1, \\\"ready\\\": true, \\\"fps\\\": 60, \\\"frames\\\": 8484, \\\"complete\\\": false, \\\"phase\\\": \\\"Settle\\\", \\\"artwork\\\": 3, \\\"collisions\\\": [], \\\"error\\\": \\\"\\\", \\\"quality\\\": \\\"balanced\\\", \\\"duration\\\": 367, \\\"camera\\\": [ 0.45, 1.68, 4.55 ] }\"\n    - text: Tour speed\n    - combobox \"Tour speed\":\n      - option \"1 ×\" [selected]\n      - option \"4 ×\"\n      - option \"12 ×\"\n    - generic: Placeholder artwork. Architecture inspired by the neutral, top-lit galleries of White Cube Bermondsey; an original 100 m² plan.\n- alert",
+    "- main:\n  - link \"VÆST home\":\n    - /url: /\n    - img \"VÆST\"\n  - text: EXHIBITION 001\n  - generic: SPACE BETWEEN\n  - button \"Balanced ↗\"\n  - text: A STUDY IN STILLNESS\n  - heading \"Space between.\" [level=1]:\n    - text: Space\n    - text: between.\n  - text: 09 / 10\n  - heading \"The quiet edge\" [level=2]\n  - paragraph: Graphite and pigment on linen · 2026\n  - button \"Resume tour\": ▶\n  - button \"Restart tour\": ↺\n  - button \"Previous artwork\": Back\n  - button \"Next artwork\" [active]: Next\n  - generic: Settle\n  - button \"View Sediment / 01\": \"01\"\n  - button \"View Weather / 02\": \"02\"\n  - button \"View After the rain\": \"03\"\n  - button \"View Blue interval\": \"04\"\n  - button \"View Warm silence\": \"05\"\n  - button \"View A second horizon\": \"06\"\n  - button \"View Late warmth\": \"07\"\n  - button \"View A field of light\": \"08\"\n  - button \"View The quiet edge\": \"09\"\n  - button \"View Negative space\": \"10\"\n  - complementary:\n    - text: Gallery diagnostics\n    - paragraph: 10 × 10 m main gallery + 10 × 3 m entrance · 4 m high · 2.4 m connecting doorway\n    - generic: \"{ \\\"time\\\": 273, \\\"playing\\\": false, \\\"speed\\\": 1, \\\"ready\\\": true, \\\"fps\\\": 60, \\\"frames\\\": 8512, \\\"complete\\\": false, \\\"phase\\\": \\\"Settle\\\", \\\"artwork\\\": 7, \\\"collisions\\\": [], \\\"error\\\": \\\"\\\", \\\"quality\\\": \\\"balanced\\\", \\\"duration\\\": 367, \\\"camera\\\": [ -3.25, 1.68, 2.45 ] }\"\n    - text: Tour speed\n    - combobox \"Tour speed\":\n      - option \"1 ×\" [selected]\n      - option \"4 ×\"\n      - option \"12 ×\"\n    - generic: Placeholder artwork. Architecture inspired by the neutral, top-lit galleries of White Cube Bermondsey; an original 100 m² plan.\n- alert",
+    "- main:\n  - link \"VÆST home\":\n    - /url: /\n    - img \"VÆST\"\n  - text: EXHIBITION 001\n  - generic: SPACE BETWEEN\n  - button \"Balanced ↗\"\n  - text: A STUDY IN STILLNESS\n  - heading \"Space between.\" [level=1]:\n    - text: Space\n    - text: between.\n  - text: 10 / 10\n  - heading \"Negative space\" [level=2]\n  - paragraph: Mineral pigment on linen · 2026\n  - button \"Resume tour\": ▶\n  - button \"Restart tour\": ↺\n  - button \"Previous artwork\": Back\n  - button \"Next artwork\" [disabled]: Next\n  - generic: Settle\n  - button \"View Sediment / 01\": \"01\"\n  - button \"View Weather / 02\": \"02\"\n  - button \"View After the rain\": \"03\"\n  - button \"View Blue interval\": \"04\"\n  - button \"View Warm silence\": \"05\"\n  - button \"View A second horizon\": \"06\"\n  - button \"View Late warmth\": \"07\"\n  - button \"View A field of light\": \"08\"\n  - button \"View The quiet edge\": \"09\"\n  - button \"View Negative space\": \"10\"\n  - complementary:\n    - text: Gallery diagnostics\n    - paragraph: 10 × 10 m main gallery + 10 × 3 m entrance · 4 m high · 2.4 m connecting doorway\n    - generic: \"{ \\\"time\\\": 302, \\\"playing\\\": false, \\\"speed\\\": 1, \\\"ready\\\": true, \\\"fps\\\": 60, \\\"frames\\\": 8519, \\\"complete\\\": false, \\\"phase\\\": \\\"Settle\\\", \\\"artwork\\\": 8, \\\"collisions\\\": [], \\\"error\\\": \\\"\\\", \\\"quality\\\": \\\"balanced\\\", \\\"duration\\\": 367, \\\"camera\\\": [ -2.3, 1.68, -0.95 ] }\"\n    - text: Tour speed\n    - combobox \"Tour speed\":\n      - option \"1 ×\" [selected]\n      - option \"4 ×\"\n      - option \"12 ×\"\n    - generic: Placeholder artwork. Architecture inspired by the neutral, top-lit galleries of White Cube Bermondsey; an original 100 m² plan.\n- alert"
+  ],
+  "pause": [
+    {
+      "time": 285.6317999999965,
+      "playing": false,
+      "speed": 1,
+      "ready": true,
+      "fps": 60,
+      "frames": 9311,
+      "complete": false,
+      "phase": "Hold",
+      "artwork": 7,
+      "collisions": [],
+      "error": "",
+      "quality": "balanced",
+      "duration": 367,
+      "camera": [
+        -2.9,
+        1.68,
+        2.45
+      ]
+    },
+    {
+      "time": 285.6317999999965,
+      "playing": false,
+      "speed": 1,
+      "ready": true,
+      "fps": 60,
+      "frames": 9888,
+      "complete": false,
+      "phase": "Hold",
+      "artwork": 7,
+      "collisions": [],
+      "error": "",
+      "quality": "balanced",
+      "duration": 367,
+      "camera": [
+        -2.9,
+        1.68,
+        2.45
+      ]
+    }
+  ],
+  "viewport": {
+    "canvas": [
+      1280,
+      720
+    ],
+    "viewport": [
+      1280,
+      720
+    ]
+  },
+  "logs": []
+}
