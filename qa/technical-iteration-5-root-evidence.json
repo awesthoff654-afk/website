@@ -1,0 +1,249 @@
+[
+  {
+    "check": "Initial full route at12x",
+    "state": {
+      "time": 123,
+      "playing": false,
+      "speed": 12,
+      "ready": true,
+      "fps": 60,
+      "frames": 1846,
+      "complete": true,
+      "phase": "Complete",
+      "artwork": -1,
+      "collisions": [],
+      "error": "",
+      "quality": "high",
+      "duration": 123,
+      "camera": [
+        0,
+        1.68,
+        4.65
+      ]
+    }
+  },
+  {
+    "check": "Pause",
+    "state": {
+      "time": 0.28269999999925494,
+      "playing": false,
+      "speed": 1,
+      "ready": true,
+      "fps": 60,
+      "frames": 1877,
+      "complete": false,
+      "phase": "Approach",
+      "artwork": 0,
+      "collisions": [],
+      "error": "",
+      "quality": "high",
+      "duration": 123,
+      "camera": [
+        -0.0142096898380715,
+        1.68,
+        4.642411461076606
+      ]
+    }
+  },
+  {
+    "check": "Pause remains stationary",
+    "state": {
+      "time": 0.28269999999925494,
+      "playing": false,
+      "speed": 1,
+      "ready": true,
+      "fps": 60,
+      "frames": 3537,
+      "complete": false,
+      "phase": "Approach",
+      "artwork": 0,
+      "collisions": [],
+      "error": "",
+      "quality": "high",
+      "duration": 123,
+      "camera": [
+        -0.0142096898380715,
+        1.68,
+        4.642411461076606
+      ]
+    }
+  },
+  {
+    "check": "Second route at4x",
+    "state": {
+      "time": 123,
+      "playing": false,
+      "speed": 4,
+      "ready": true,
+      "fps": 60,
+      "frames": 7247,
+      "complete": true,
+      "phase": "Complete",
+      "artwork": -1,
+      "collisions": [],
+      "error": "",
+      "quality": "high",
+      "duration": 123,
+      "camera": [
+        0,
+        1.68,
+        4.65
+      ]
+    }
+  },
+  {
+    "check": "Destination Sediment / 01",
+    "state": {
+      "time": 14.317499999999995,
+      "playing": false,
+      "speed": 1,
+      "ready": true,
+      "fps": 60,
+      "frames": 7281,
+      "complete": false,
+      "phase": "Slow pan",
+      "artwork": 0,
+      "collisions": [],
+      "error": "",
+      "quality": "high",
+      "duration": 123,
+      "camera": [
+        -2.385945670511719,
+        1.68,
+        0.3725589014384284
+      ]
+    }
+  },
+  {
+    "check": "Destination After the rain",
+    "state": {
+      "time": 40.284299999998865,
+      "playing": false,
+      "speed": 1,
+      "ready": true,
+      "fps": 60,
+      "frames": 7315,
+      "complete": false,
+      "phase": "Slow pan",
+      "artwork": 1,
+      "collisions": [],
+      "error": "",
+      "quality": "high",
+      "duration": 123,
+      "camera": [
+        -2.3164477837358706,
+        1.68,
+        -2.389421903043097
+      ]
+    }
+  },
+  {
+    "check": "Destination Warm silence",
+    "state": {
+      "time": 75.28229999999891,
+      "playing": false,
+      "speed": 1,
+      "ready": true,
+      "fps": 60,
+      "frames": 7349,
+      "complete": false,
+      "phase": "Slow pan",
+      "artwork": 2,
+      "collisions": [],
+      "error": "",
+      "quality": "high",
+      "duration": 123,
+      "camera": [
+        2.232735004024944,
+        1.68,
+        -1.8123905304885015
+      ]
+    }
+  },
+  {
+    "check": "Destination A field of light",
+    "state": {
+      "time": 103.28340000000041,
+      "playing": false,
+      "speed": 1,
+      "ready": true,
+      "fps": 60,
+      "frames": 7383,
+      "complete": false,
+      "phase": "Slow pan",
+      "artwork": 3,
+      "collisions": [],
+      "error": "",
+      "quality": "high",
+      "duration": 123,
+      "camera": [
+        0.38491601052997243,
+        1.6799999999999997,
+        4.566573967604196
+      ]
+    }
+  },
+  {
+    "check": "Balanced sustained hold",
+    "state": {
+      "time": 103.28340000000041,
+      "playing": false,
+      "speed": 1,
+      "ready": true,
+      "fps": 60,
+      "frames": 8776,
+      "complete": false,
+      "phase": "Slow pan",
+      "artwork": 3,
+      "collisions": [],
+      "error": "",
+      "quality": "balanced",
+      "duration": 123,
+      "camera": [
+        0.38491601052997243,
+        1.6799999999999997,
+        4.566573967604196
+      ]
+    }
+  },
+  {
+    "check": "High sustained hold",
+    "state": {
+      "time": 123,
+      "playing": false,
+      "speed": 12,
+      "ready": true,
+      "fps": 60,
+      "frames": 36602,
+      "complete": true,
+      "phase": "Complete",
+      "artwork": -1,
+      "collisions": [],
+      "error": "",
+      "quality": "high",
+      "duration": 123,
+      "camera": [
+        0,
+        1.68,
+        4.65
+      ]
+    }
+  },
+  {
+    "check": "Console",
+    "logs": []
+  },
+  {
+    "check": "Viewport",
+    "dimensions": {
+      "buffer": [
+        938,
+        905
+      ],
+      "viewport": [
+        751,
+        724
+      ]
+    }
+  }
+]

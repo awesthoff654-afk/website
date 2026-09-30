@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="780" viewBox="0 0 720 780">
+<rect width="720" height="780" fill="#f6f5f0"/>
+<g font-family="Arial, sans-serif" fill="#30352f">
+<text x="72" y="48" font-size="24" letter-spacing="1">VÆST / REVISED WALL PLAN</text>
+<text x="72" y="77" font-size="13">10 × 10 m room · 4 m ceiling · inspired by your sketch</text>
+<rect x="80" y="120" width="560" height="560" fill="#e4e4df"/>
+<path d="M295.6 680H80V120H640V680H424.4" fill="none" stroke="#444b43" stroke-width="9"/>
+<rect x="353.28" y="226.4" width="13.44" height="187.6" fill="#fff" stroke="#777e74" stroke-width="1.5"/>
+<rect x="236.8" y="500.8" width="246.4" height="13.44" fill="#fff" stroke="#777e74" stroke-width="1.5"/>
+<text x="388" y="294" font-size="13">Longitudinal wall</text>
+<text x="388" y="315" font-size="12">3.35 m long</text>
+<text x="237" y="555" font-size="13">Entrance-facing wall · 4.4 m wide</text>
+<path d="M322 414V500.8M315 414H329M315 500.8H329" fill="none" stroke="#777e74" stroke-width="1.5"/>
+<text x="215" y="461" font-size="12">1.55 m gap</text>
+<path d="M360 733V696M350 707L360 696L370 707" fill="none" stroke="#444b43" stroke-width="2"/>
+<text x="322" y="758" font-size="14">ENTRANCE</text>
+<text x="80" y="106" font-size="12">REAR OF GALLERY</text>
+<text x="92" y="654" font-size="12" fill="#777e74">Walls are separate · 3.45 m high · open circulation on both sides</text>
+</g></svg>

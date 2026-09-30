@@ -1,0 +1,27 @@
+{
+  "state": {
+    "time": 88.28790000000035,
+    "playing": false,
+    "speed": 1,
+    "ready": true,
+    "fps": 48,
+    "frames": 7167,
+    "complete": false,
+    "phase": "Slow pan",
+    "artwork": 3,
+    "collisions": [],
+    "error": "",
+    "quality": "high",
+    "duration": 113,
+    "camera": [
+      1.6996028506368663,
+      1.68,
+      1.65
+    ]
+  },
+  "logs": [],
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}
