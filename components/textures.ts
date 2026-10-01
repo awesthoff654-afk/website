@@ -6,19 +6,27 @@ export function surface(kind:'plaster'|'concrete'){
  const make=(d:Uint8Array,srgb=false)=>{const t=new THREE.DataTexture(d,n,n);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(kind==='plaster'?4:3,kind==='plaster'?4:3);t.colorSpace=srgb?THREE.SRGBColorSpace:THREE.NoColorSpace;t.magFilter=THREE.LinearFilter;t.minFilter=THREE.LinearMipmapLinearFilter;t.generateMipmaps=true;t.anisotropy=8;t.needsUpdate=true;return t;};
  return {map:make(albedo,true),roughnessMap:make(rough),normalMap:make(normal)};
 }
-export function artTexture(index:number){
- const c=document.createElement('canvas');c.width=1536;c.height=1920;const ctx=c.getContext('2d')!;const random=rng(index*271+23);
- const palettes=[['#cec2ad','#8e826e','#4b4a3f','#b5aa94'],['#d2d2c4','#88a1a3','#43636d','#bab2a0'],['#d4b797','#b47756','#7c483b','#c99976'],['#dcd5ba','#b0aa83','#747963','#c9c2a4']];const p=palettes[index%palettes.length];ctx.fillStyle=p[0];ctx.fillRect(0,0,c.width,c.height);
- // Broad transparent, soft-edged mineral pigment fields.
- for(let j=0;j<45;j++){const x=random()*c.width,y=random()*c.height,r=220+random()*500;const g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,p[1+Math.floor(random()*3)]+'42');g.addColorStop(1,p[1]+'00');ctx.fillStyle=g;ctx.fillRect(x-r,y-r,r*2,r*2);}
- // Individual organic brush marks: curved fibres, never polygon facets.
- ctx.lineCap='round';for(let j=0;j<6500;j++){const x=random()*c.width,y=random()*c.height;const length=15+random()*150;ctx.strokeStyle=p[1+Math.floor(random()*3)];ctx.globalAlpha=.007+random()*.026;ctx.lineWidth=2+random()*28;ctx.beginPath();ctx.moveTo(x,y);ctx.bezierCurveTo(x+length*.3,y+(random()-.5)*15,x+length*.7,y+(random()-.5)*22,x+length,y+(random()-.5)*30);ctx.stroke();}
- ctx.globalAlpha=.45;ctx.fillStyle=p[2];ctx.filter='blur(3px)';
- if(index%4===0){ctx.beginPath();ctx.moveTo(470,330);ctx.bezierCurveTo(430,680,485,1000,450,1540);ctx.lineTo(965,1520);ctx.bezierCurveTo(930,1110,990,620,950,310);ctx.closePath();ctx.fill();}
- if(index%4===1){ctx.beginPath();ctx.ellipse(780,1020,490,155,-.09,0,Math.PI*2);ctx.fill();}
- if(index%4===2){ctx.beginPath();ctx.ellipse(795,990,400,427,.01,0,Math.PI*2);ctx.fill();}
- if(index%4===3){ctx.beginPath();ctx.moveTo(300,770);ctx.bezierCurveTo(650,745,910,780,1240,755);ctx.lineTo(1230,1010);ctx.bezierCurveTo(900,1000,680,1030,310,1007);ctx.closePath();ctx.fill();}
- ctx.filter='none';ctx.globalAlpha=1;const pixels=ctx.getImageData(0,0,c.width,c.height);for(let y=0;y<c.height;y++)for(let x=0;x<c.width;x++){const i=(y*c.width+x)*4;const weave=((x%4===0?1:0)+(y%4===0?1:0))*1.1;const v=(random()-.5)*4+weave;pixels.data[i]+=v;pixels.data[i+1]+=v;pixels.data[i+2]+=v;}ctx.putImageData(pixels,0,0);
+export function artTexture(index:number,width=1.7,height=2.15){
+ const c=document.createElement('canvas');c.width=2048;c.height=Math.round(2048*height/width);const ctx=c.getContext('2d')!;const random=rng(1023+index*977);
+ const palettes=[['#e4dbc7','#aaa08b','#45493e','#c6baa3'],['#dee5df','#69898c','#24444e','#aebbb3'],['#e9d5b8','#ba633c','#69362d','#d39a62'],['#e6e3cb','#99a180','#3e4f42','#bdc4a4'],['#e6e1d6','#8f9088','#282d29','#b9b6a9'],['#dfe4e5','#748f9f','#233e58','#b3c7cf'],['#ecd8bb','#c88b43','#863d25','#e7b278'],['#ebe7dc','#a7a394','#242b2c','#ceccbf'],['#e0d8c7','#979385','#454637','#c0b8a5'],['#dce7e4','#82a3a6','#355d66','#b0ccc9']];const p=palettes[index%10];ctx.fillStyle=p[0];ctx.fillRect(0,0,c.width,c.height);ctx.save();ctx.scale(c.width/1000,c.height/1000);
+ const line=(points:number[][],color:string,size:number,alpha=1)=>{ctx.globalAlpha=alpha;ctx.strokeStyle=color;ctx.lineWidth=size;ctx.lineCap='round';ctx.lineJoin='round';ctx.beginPath();points.forEach((point,i)=>i?ctx.lineTo(point[0],point[1]):ctx.moveTo(point[0],point[1]));ctx.stroke();};
+ const patch=(x:number,y:number,w:number,h:number,color:string,alpha=1)=>{ctx.globalAlpha=alpha;ctx.fillStyle=color;ctx.beginPath();for(let edge=0;edge<4;edge++)for(let j=0;j<30;j++){const t=j/29;const points=[[x+w*t,y],[x+w,y+h*t],[x+w*(1-t),y+h],[x,y+h*(1-t)]];const point=points[edge];const px=point[0]+(random()-.5)*3,py=point[1]+(random()-.5)*3;if(edge===0&&j===0)ctx.moveTo(px,py);else ctx.lineTo(px,py);}ctx.closePath();ctx.fill();};
+ // Separate compositions, purposeful gesture and clear edges; no shared soft blur motif.
+ switch(index){
+ case 0:patch(335,155,310,695,p[2],.93);for(let j=0;j<170;j++){const x=335+random()*310;line([[x,155],[x+(random()-.5)*9,850]],random()>.5?p[1]:p[3],.6,.16);}patch(300,712,390,3,p[1],.7);break;
+ case 1:patch(70,507,860,114,p[1],.88);line([[90,528],[305,474],[625,522],[915,482]],p[2],19,.92);line([[88,627],[348,611],[650,632],[905,609]],p[3],4,.85);for(let j=0;j<90;j++){const y=520+random()*88;line([[90,y],[910,y+(random()-.5)*10]],p[2],.4,.15);}break;
+ case 2:ctx.fillStyle=p[1];ctx.globalAlpha=.93;ctx.beginPath();ctx.ellipse(523,498,281,286,0,0,Math.PI*2);ctx.fill();for(let j=0;j<100;j++){const angle=random()*Math.PI*2,r=175+random()*100;line([[523+Math.cos(angle)*r,498+Math.sin(angle)*r],[523+Math.cos(angle)*(r+6),498+Math.sin(angle)*(r+6)]],p[2],1.2,.25);}line([[302,802],[745,798]],p[2],4,.7);break;
+ case 3:patch(130,263,330,457,p[2],.94);patch(490,191,375,539,p[1],.88);patch(458,263,11,457,p[3]);line([[125,756],[875,756]],p[1],1,.9);break;
+ case 4:line([[284,851],[357,802],[404,723],[444,611],[493,505],[510,358],[549,192]],p[2],8,.95);for(let j=0;j<16;j++)line([[284+(random()-.5)*8,850],[357+(random()-.5)*9,803],[403+(random()-.5)*12,725],[443+(random()-.5)*12,612],[492+(random()-.5)*10,503],[509+(random()-.5)*8,360],[549+(random()-.5)*9,194]],p[2],.7,.45);break;
+ case 5:patch(93,157,811,215,p[2],.92);patch(93,392,811,167,p[1],.95);patch(93,579,811,256,p[3],.9);line([[93,372],[904,372]],p[0],9);line([[95,561],[904,561]],p[0],8);break;
+ case 6:for(let j=0;j<68;j++){const shift=(j-34)*1.2;line([[154,711+shift],[388,388+shift],[615,627+shift],[850,297+shift]],j%3===0?p[2]:p[1],3,.9);}line([[186,815],[864,815]],p[2],3,.8);break;
+ case 7:for(const [x,y,r] of [[326,359,77],[640,337,111],[466,612,49],[702,714,91]]){ctx.globalAlpha=.93;ctx.fillStyle=p[2];ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();}line([[182,850],[821,850]],p[1],1,.8);break;
+ case 8:patch(152,193,351,279,p[1],.96);patch(496,273,352,259,p[2],.96);patch(295,561,366,279,p[3],.96);for(let j=0;j<65;j++){const y=300+j*2;line([[504,y],[844,y+(random()-.5)*3]],p[1],.5,.15);}break;
+ default:for(let x=185;x<855;x+=67)line([[x,174],[x+(random()-.5)*14,836]],p[2],2.1,.82);for(let y=174;y<845;y+=66)line([[177,y],[843,y+(random()-.5)*13]],p[1],2.7,.84);patch(377,372,203,205,p[2],.86);break;
+ }
+ // Minute pigment pores and varied short bristle tracks stay below macro composition scale.
+ for(let j=0;j<4800;j++){const x=random()*1000,y=random()*1000;ctx.fillStyle=random()>.5?p[1]:p[3];ctx.globalAlpha=.02+random()*.045;ctx.fillRect(x,y,.3+random()*.8,.2+random()*1.8);}
+ ctx.restore();ctx.globalAlpha=1;const pixels=ctx.getImageData(0,0,c.width,c.height);for(let y=0;y<c.height;y++)for(let x=0;x<c.width;x++){const i=(y*c.width+x)*4;const weave=((x%5===0?1:0)+(y%5===0?1:0))*.7;const grain=(random()-.5)*3+weave;pixels.data[i]+=grain;pixels.data[i+1]+=grain;pixels.data[i+2]+=grain;}ctx.putImageData(pixels,0,0);
  const texture=new THREE.CanvasTexture(c);texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=16;return texture;
 }
 export function artSurface(index:number){
@@ -27,3 +35,9 @@ export function artSurface(index:number){
  const make=(data:Uint8Array)=>{const t=new THREE.DataTexture(data,n,n);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(5,6);t.minFilter=THREE.LinearMipmapLinearFilter;t.generateMipmaps=true;t.anisotropy=16;t.needsUpdate=true;return t;};return {normalMap:make(normal),roughnessMap:make(rough)};
 }
 export function artLabel(title:string,medium:string,year:string){const canvas=document.createElement('canvas');canvas.width=1024;canvas.height=448;const ctx=canvas.getContext('2d')!;ctx.fillStyle='#f0efe8';ctx.fillRect(0,0,1024,448);ctx.fillStyle='#32352e';ctx.font='bold 70px Arial';ctx.fillText('VÆST',58,96);ctx.font='48px Arial';ctx.fillText(title,58,182);ctx.font='36px Arial';ctx.fillText(medium,58,258);ctx.fillStyle='#65685e';ctx.fillText(year+' · Exhibition study',58,330);const map=new THREE.CanvasTexture(canvas);map.colorSpace=THREE.SRGBColorSpace;map.anisotropy=16;return map;}
+export function physicalPaintSurface(texture:THREE.Texture){
+ const n=1024,canvas=document.createElement('canvas');canvas.width=canvas.height=n;const ctx=canvas.getContext('2d')!;ctx.drawImage(texture.image as HTMLImageElement,0,0,n,n);const pixels=ctx.getImageData(0,0,n,n).data,luma=new Float32Array(n*n),height=new Float32Array(n*n);for(let i=0;i<luma.length;i++)luma[i]=(pixels[i*4]*.2126+pixels[i*4+1]*.7152+pixels[i*4+2]*.0722)/255;
+ for(let y=0;y<n;y++)for(let x=0;x<n;x++){let sum=0;for(let oy=-2;oy<=2;oy++)for(let ox=-2;ox<=2;ox++)sum+=luma[Math.max(0,Math.min(n-1,y+oy))*n+Math.max(0,Math.min(n-1,x+ox))];height[y*n+x]=Math.max(-.08,Math.min(.08,luma[y*n+x]-sum/25));}
+ const normal=new Uint8Array(n*n*4),rough=new Uint8Array(n*n*4);for(let y=0;y<n;y++)for(let x=0;x<n;x++){const i=y*n+x,j=i*4,dx=(height[y*n+Math.min(n-1,x+1)]-height[y*n+Math.max(0,x-1)])*2.2,dy=(height[Math.min(n-1,y+1)*n+x]-height[Math.max(0,y-1)*n+x])*2.2;const inverse=1/Math.sqrt(1+dx*dx+dy*dy);normal.set([128-dx*inverse*127,128+dy*inverse*127,128+inverse*127,255],j);const value=195+luma[i]*43;rough.set([value,value,value,255],j);}
+ const make=(data:Uint8Array)=>{const map=new THREE.DataTexture(data,n,n);map.minFilter=THREE.LinearMipmapLinearFilter;map.generateMipmaps=true;map.anisotropy=16;map.repeat.copy(texture.repeat);map.offset.copy(texture.offset);map.flipY=texture.flipY;map.needsUpdate=true;return map;};return {normalMap:make(normal),roughnessMap:make(rough)};
+}

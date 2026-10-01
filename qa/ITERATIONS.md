@@ -98,3 +98,27 @@ User requested a smaller entrance room leading into the larger main gallery thro
 ### Iteration 7 technical result — PASS
 
 Frozen production build and types pass. Independent Technical Gate report: qa/technical-iteration-7.md. Dense 367,001 geometry samples, all ten mounts and 20 framing cases pass; minimum separation 0.4376 m. Root live production-browser evidence at 1280 × 720: complete 367-second tours in high and balanced modes returned to [0,1.68,7.4], 60 fps, no errors or collisions. Back/Next walked all ten destinations in order and paused; first/last boundaries, resume, restart and stable pause passed. Independent gate explicitly distinguishes root browser evidence from its own static inspection. Visual review pending; no visual score assigned. User authorizes deploying requested technically passing updates before visual acceptance.
+
+### Iteration 7 deployment verified
+
+GitHub main commit 590d530442c68cac99985112bc33ba81448d21a8 triggered Vercel successfully. Root independently opened https://www.vaest.art/?qa&release=590d530 and confirmed the real logo, new two-room dimensions, Back/Next, ten works, 367-second duration, ready=true, high quality 60 fps and no console errors. Requested changes are live; visual acceptance remains open. Updated collaborator handoff was excluded from this public upload because automatic approval review rejected public disclosure of collaborator identity/domain details. Local updated handoff remains available for direct sharing.
+
+### Iteration 7 visual result — FAIL, provisional 6.9/10
+
+Independent reviewer inspected actual root-captured frozen-build renders (qa/visual-iteration-7.md), calibrated against the user’s 6.5 baseline. Overall provisional 6.9; floor reflections improved, while repeated soft artwork textures, broad diagonal canvas glare/shadow bands, flat GI, underdefined ceiling recesses and weak frame contact remain. Independent reviewer live browser was unavailable; camera/motion and AA scores are provisional. This is not full independent motion acceptance and 9.2 is unmet. Iteration 8 targets these actual findings while preserving the requested bright structural junctions.
+
+## Iteration 8 — technical PASS, visual FAIL 7.1 provisional
+
+Production build/types pass; qa/technical-iteration-8.md records matching frozen hashes and independent static validation plus root live full367s high/balanced60fps zeroerrors. Only artwork/ceiling details changed; route controls preserved. Independent actual-render image review qa/visual-iteration-8.md confirms diagonal bands fixed and ten compositions distinct, but surfaces still flatgraphics, contactweak and GIuniform. Provisional7.1 is only+0.2 from7’s6.9, below user’s >0.5 score-improvement deployment rule; not deployed. Independentmotioninspectionstillunverified.
+
+## Iteration 9 — in progress
+
+Image-generation skill built-in tool generated a physical painting texture prototype, copied unchanged to public/artworks/after-rain-study-v1.png. Builder integrating one distinctasset to validate painted linen response before broader replacement, pluslocalizedmountingcontact and broaderrooflight irradiance while keeping structuraljunctionsbright.
+
+### Iteration 9 revised user brief — 1 October 2026
+
+Latest user references supersede the prior clean-junction preference: dark narrow reveals at wall-floor and wall-ceiling intersections and around every rooflight are now required. Concrete should be darker neutral grey with patchy mottling/blemishes; walls gain subtle light plaster texture from the supplied AVIF. Central divider walls are interpreted as 3 m high versus 4 m outer walls. Rendering is always high quality, with no Balanced selector. Artwork views must be farther away and straight, with aligned camera/target height and frontal settle positions. Both loading stages must show only the actual supplied logo on pure white. New camera and divider geometry require fresh technical validation. Requested changes deploy after Technical Gate PASS regardless of visual score; final9.2/critical8.8 acceptance still unmet.
+
+### Iteration 9 technical result — PASS
+
+Benchmeshes andcollisionbox removed. Frozenproductionbuild/typesPASS; independent qa/technical-iteration-9.md verifies385001geometrysamples minseparation.533384m,all10mounts,20viewportprojectioncases maxNDC.685,zeroverticalconvergence/pitch atartviewingwindows,all10viewdistances increased+.320…+.770m to2.8–3.2m. Rootlivefull385tourcompleted highquality53–60fps,noerrors/collisions;all10BackNextdestinations,boundaries,resume/restart/stablepausepass. BothloadingDOMstagesactualimglogo only,noqualityselector. Visualreviewpending; requestedchangesauthorizedfordeployaftertechnicalPASS.
