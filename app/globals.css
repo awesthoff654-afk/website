@@ -8,3 +8,9 @@
 .transport .step{font-size:10px}.transport button:disabled{opacity:.3;cursor:default}
 
 .loading{background:#fff}.exhibition{position:absolute;left:50%;transform:translateX(-50%)}
+
+.loading{background:#000}.loading .brand img{filter:invert(1);mix-blend-mode:screen}.timeline{width:190px;max-width:30vw;height:18px;margin:0 0 0 4px;accent-color:#30382b;cursor:ew-resize}.timeline:focus-visible{outline:2px solid #5b654b;outline-offset:5px}.transport{min-width:0}@media(max-width:700px){.timeline{width:150px;max-width:40vw}}
+
+.instagram{display:flex;align-items:center;justify-content:center;width:44px;height:44px;color:inherit;flex-shrink:0;text-decoration:none}.instagram:hover{opacity:.6}.instagram:focus-visible{outline:2px solid #5b654b;outline-offset:3px}
+
+.header-controls{display:flex;align-items:center;gap:10px;margin-left:auto}.playback-speed{border:0;background:transparent;color:inherit;font:inherit;font-size:11px;padding:10px 2px;cursor:pointer}.playback-speed:focus-visible{outline:2px solid #5b654b;outline-offset:3px}

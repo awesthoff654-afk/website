@@ -5,3 +5,5 @@ export const destinations:number[];
 export const viewingWindows:[number,number][];
 export function sampleRoute(time:number):{position:number[];target:number[];artwork:number;phase:string;time:number;complete:boolean};
 export function collisionAt(p:number[],radius?:number):string[];
+
+export const closingView:{align:number;start:number;end:number;position:number[];target:number[]};

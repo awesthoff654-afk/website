@@ -1,8 +1,10 @@
 // Independent gate: conservative actual scene bounds, not only wall centers.
 import {sampleRoute,walls,artworks,duration} from '../lib/route.mjs';
+import {ceilingParts} from '../lib/architecture.mjs';
 const boxes=[...walls,
- {name:'ceiling',min:[-5.2,4,-5.2],max:[5.2,4.16,5.2]},
- {name:'floor',min:[-5.2,-.01,-5.2],max:[5.2,0,5.2]},
+ ...ceilingParts.map(part=>({...part,name:'ceiling'})),
+ {name:'floor-main',min:[-5.2,-.01,-5.2],max:[5.2,0,4.98]},
+ {name:'floor-entrance',min:[-14.2,-.01,4.98],max:[14.2,0,9.2]},
  ...artworks.map((a,i)=>{
   // Conservative union of canvas and wood support; artworks rotate by multiples of 90°.
   const half=Math.abs(Math.sin(a.rotation[1]))>.5?[.09,(a.size[1]+.06)/2,(a.size[0]+.06)/2]:[(a.size[0]+.06)/2,(a.size[1]+.06)/2,.09];
