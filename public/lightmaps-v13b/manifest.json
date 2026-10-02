@@ -1,0 +1,316 @@
+{
+  "method": "cosine-weighted diffuse path tracing, direct + indirect; static shell only",
+  "samples": 128,
+  "bounces": 4,
+  "wallFaceSize": 48,
+  "floorSize": 160,
+  "wallAtlas": "6x1 +X -X +Y -Y +Z -Z standard Three BoxGeometry UV",
+  "encoding": "sRGB E/(8*pi), base lightMapIntensity=8*pi",
+  "walls": [
+    {
+      "name": "west",
+      "min": [
+        -5.18,
+        0,
+        -5.18
+      ],
+      "max": [
+        -4.98,
+        4,
+        5.18
+      ]
+    },
+    {
+      "name": "east",
+      "min": [
+        4.98,
+        0,
+        -5.18
+      ],
+      "max": [
+        5.18,
+        4,
+        5.18
+      ]
+    },
+    {
+      "name": "north",
+      "min": [
+        -5.18,
+        0,
+        -5.18
+      ],
+      "max": [
+        5.18,
+        4,
+        -4.98
+      ]
+    },
+    {
+      "name": "entrance-left",
+      "min": [
+        -5.18,
+        0,
+        4.98
+      ],
+      "max": [
+        -1.2,
+        4,
+        5.18
+      ]
+    },
+    {
+      "name": "entrance-right",
+      "min": [
+        1.2,
+        0,
+        4.98
+      ],
+      "max": [
+        5.18,
+        4,
+        5.18
+      ]
+    },
+    {
+      "name": "vestibule-north-left",
+      "min": [
+        -14.18,
+        0,
+        4.98
+      ],
+      "max": [
+        -5.18,
+        4,
+        5.18
+      ]
+    },
+    {
+      "name": "vestibule-north-right",
+      "min": [
+        5.18,
+        0,
+        4.98
+      ],
+      "max": [
+        14.18,
+        4,
+        5.18
+      ]
+    },
+    {
+      "name": "vestibule-west",
+      "min": [
+        -14.18,
+        0,
+        5.18
+      ],
+      "max": [
+        -13.98,
+        4,
+        9.18
+      ]
+    },
+    {
+      "name": "vestibule-east",
+      "min": [
+        13.98,
+        0,
+        5.18
+      ],
+      "max": [
+        14.18,
+        4,
+        9.18
+      ]
+    },
+    {
+      "name": "vestibule-south-left",
+      "min": [
+        -14.18,
+        0,
+        8.98
+      ],
+      "max": [
+        -1.2,
+        4,
+        9.18
+      ]
+    },
+    {
+      "name": "vestibule-south-right",
+      "min": [
+        1.2,
+        0,
+        8.98
+      ],
+      "max": [
+        14.18,
+        4,
+        9.18
+      ]
+    },
+    {
+      "name": "exhibition-longitudinal",
+      "min": [
+        -0.12,
+        0,
+        -3.1
+      ],
+      "max": [
+        0.12,
+        3,
+        0.25
+      ]
+    },
+    {
+      "name": "exhibition-entrance-facing",
+      "min": [
+        -2.2,
+        0,
+        1.8
+      ],
+      "max": [
+        2.2,
+        3,
+        2.04
+      ]
+    }
+  ],
+  "emitters": [
+    [
+      -4.2749999999999995,
+      0
+    ],
+    [
+      -3.3249999999999997,
+      0
+    ],
+    [
+      -2.375,
+      0
+    ],
+    [
+      -1.4249999999999998,
+      0
+    ],
+    [
+      -0.475,
+      0
+    ],
+    [
+      0.475,
+      0
+    ],
+    [
+      1.4249999999999998,
+      0
+    ],
+    [
+      2.375,
+      0
+    ],
+    [
+      3.3249999999999997,
+      0
+    ],
+    [
+      4.2749999999999995,
+      0
+    ],
+    [
+      -12.6,
+      7.08
+    ],
+    [
+      -11.2,
+      7.08
+    ],
+    [
+      -9.799999999999999,
+      7.08
+    ],
+    [
+      -8.399999999999999,
+      7.08
+    ],
+    [
+      -7,
+      7.08
+    ],
+    [
+      -5.6,
+      7.08
+    ],
+    [
+      -4.199999999999999,
+      7.08
+    ],
+    [
+      -2.8,
+      7.08
+    ],
+    [
+      -1.4,
+      7.08
+    ],
+    [
+      0,
+      7.08
+    ],
+    [
+      1.4,
+      7.08
+    ],
+    [
+      2.8,
+      7.08
+    ],
+    [
+      4.199999999999999,
+      7.08
+    ],
+    [
+      5.6,
+      7.08
+    ],
+    [
+      7,
+      7.08
+    ],
+    [
+      8.399999999999999,
+      7.08
+    ],
+    [
+      9.799999999999999,
+      7.08
+    ],
+    [
+      11.2,
+      7.08
+    ],
+    [
+      12.6,
+      7.08
+    ]
+  ],
+  "radiance": 15,
+  "excluded": "Artwork occlusion, 2-3mm bevels and exterior daylight are not baked",
+  "filter": "Independent face filtering in LINEAR irradiance with edge padding: 2.5 wall texels, 2 floor/ceiling. Runtime analytic slot visibility on physical recess surfaces.",
+  "referenceCalibration": {
+    "walls": 2.6,
+    "ceiling": 2.8,
+    "floor": 2.2
+  },
+  "ceilingSize": 160,
+  "footprint": "10x10m main + 28x4m entrance",
+  "postprocess": {
+    "source": "frozen lightmaps-v13",
+    "space": "linear irradiance",
+    "wallSigma": 5,
+    "ceilingSigma": 3,
+    "floorSigma": 2,
+    "faces": "filtered separately; edge padding"
+  }
+}
