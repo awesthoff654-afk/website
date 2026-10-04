@@ -1,0 +1,1 @@
+Noto Sans Latin, regular (v27). Copyright the Noto Project Authors. Licensed under the SIL Open Font License 1.1. Bundled from Next.js @vercel/og. Source and license: https://github.com/notofonts/latin-greek-cyrillic

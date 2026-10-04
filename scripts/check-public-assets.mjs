@@ -3,7 +3,7 @@ import path from 'node:path';
 import {walls} from '../lib/route.mjs';
 const files=['components/Gallery.tsx','app/page.tsx','components/textures.ts','app/bio/page.tsx','lib/route.mjs'];
 const required=new Set();
-for(const file of files){const source=fs.readFileSync(file,'utf8');for(const match of source.matchAll(/['"]\/(artworks|branding|textures)\/([^'"\s]+\.(?:jpg|png|avif|webp|svg|woff2|json))['"]/g))required.add(match[1]+'/'+match[2]);}
+for(const file of files){const source=fs.readFileSync(file,'utf8');for(const match of source.matchAll(/['"]\/(artworks|branding|textures|fonts)\/([^'"\s]+\.(?:jpg|png|avif|webp|svg|woff2|ttf|json))['"]/g))required.add(match[1]+'/'+match[2]);}
 for(const material of ['plaster','concrete'])for(const suffix of ['roughness','normal'])required.add(`textures/${material}-${suffix}.jpg`);
 const gallery=fs.readFileSync(files[0],'utf8');
 const directory=gallery.match(/useTexture\(['"]\/(lightmaps[^/]+)\//)?.[1];
