@@ -1,4 +1,4 @@
-export const artworks: {title:string;year:string;medium:string;position:number[];rotation:number[];size:number[];color:string}[];
+export const artworks: {title:string;year:string;medium:string;position:number[];rotation:number[];size:number[];color:string;url?:string;blank?:boolean}[];
 export const walls: {name:string;min:number[];max:number[]}[];
 export const duration:number;
 export const destinations:number[];

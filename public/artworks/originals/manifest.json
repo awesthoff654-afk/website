@@ -1,0 +1,257 @@
+[
+  {
+    "routeIndex": 3,
+    "file": "Artpiece- 90x120.png",
+    "url": "/artworks/originals/painting-01.avif",
+    "size": [
+      0.9,
+      1.2
+    ],
+    "pixels": [
+      1152,
+      1536
+    ],
+    "bytes": 217095,
+    "avifQuality": 45,
+    "sourceSha256": "301e0c655da3cb9d880723761c90a94e64d4b46e4e2a723744adc766ed428599",
+    "sourceOrientation": "EXIF-transposed",
+    "cornerQuadNormalized": [
+      [
+        0.007473841554559043,
+        0.0025
+      ],
+      [
+        0.9940209267563528,
+        0.0025
+      ],
+      [
+        0.9940209267563528,
+        0.995
+      ],
+      [
+        0.007473841554559043,
+        0.995
+      ]
+    ],
+    "operations": "EXIF orientation, surrounding photo border removal and perspective correction only; no colour grading; entire canvas mapped"
+  },
+  {
+    "routeIndex": 0,
+    "file": "90x90 Painting nr.3.jpeg",
+    "url": "/artworks/originals/painting-02.avif",
+    "size": [
+      0.9,
+      0.9
+    ],
+    "pixels": [
+      1536,
+      1536
+    ],
+    "bytes": 215060,
+    "avifQuality": 45,
+    "sourceSha256": "b4cdf3633c6dd473ef7e4c5ac5df7635c3a3c4cb96ee17b82f68850f4552c184",
+    "sourceOrientation": "EXIF-transposed",
+    "cornerQuadNormalized": [
+      [
+        0.05,
+        0.2225
+      ],
+      [
+        0.95,
+        0.2325
+      ],
+      [
+        0.94,
+        0.89125
+      ],
+      [
+        0.05333333333333334,
+        0.89375
+      ]
+    ],
+    "operations": "EXIF orientation, surrounding photo border removal and perspective correction only; no colour grading; entire canvas mapped"
+  },
+  {
+    "routeIndex": 4,
+    "file": "100x100 Painting nr.1.png",
+    "url": "/artworks/originals/painting-03.avif",
+    "size": [
+      1,
+      1
+    ],
+    "pixels": [
+      744,
+      744
+    ],
+    "bytes": 60742,
+    "avifQuality": 60,
+    "sourceSha256": "86b38ad2796a5c7c99d0ea636a8d45437709456c5786bed3e454dd3d3ae9a653",
+    "sourceOrientation": "EXIF-transposed",
+    "cornerQuadNormalized": [
+      [
+        0.0862533692722372,
+        0.04838709677419355
+      ],
+      [
+        0.9433962264150944,
+        0.05779569892473118
+      ],
+      [
+        0.9272237196765498,
+        0.9206989247311828
+      ],
+      [
+        0.07277628032345014,
+        0.9032258064516129
+      ]
+    ],
+    "operations": "EXIF orientation, surrounding photo border removal and perspective correction only; no colour grading; entire canvas mapped"
+  },
+  {
+    "routeIndex": 1,
+    "file": "100x100 Painting nr.2.png",
+    "url": "/artworks/originals/painting-04.avif",
+    "size": [
+      1,
+      1
+    ],
+    "pixels": [
+      702,
+      702
+    ],
+    "bytes": 57696,
+    "avifQuality": 60,
+    "sourceSha256": "48b667ebc4a1d91e32fd31945069376c6abcdf44d778494bdaada5ee56cf766b",
+    "sourceOrientation": "EXIF-transposed",
+    "cornerQuadNormalized": [
+      [
+        0.04227405247813411,
+        0.037037037037037035
+      ],
+      [
+        0.9737609329446064,
+        0.04843304843304843
+      ],
+      [
+        0.956268221574344,
+        0.9601139601139601
+      ],
+      [
+        0.03206997084548105,
+        0.9415954415954416
+      ]
+    ],
+    "operations": "EXIF orientation, surrounding photo border removal and perspective correction only; no colour grading; entire canvas mapped"
+  },
+  {
+    "routeIndex": 5,
+    "file": "Art_120x150_nr.2.png",
+    "url": "/artworks/originals/painting-05.avif",
+    "size": [
+      1.2,
+      1.5
+    ],
+    "pixels": [
+      1229,
+      1536
+    ],
+    "bytes": 241872,
+    "avifQuality": 50,
+    "sourceSha256": "3b2aa5f016a9fecd702e1e7ac3f2b46cca045bbda5b32ce7183a95b70e1a68d5",
+    "sourceOrientation": "EXIF-transposed",
+    "cornerQuadNormalized": null,
+    "operations": "EXIF orientation, surrounding photo border removal and perspective correction only; no colour grading; entire canvas mapped"
+  },
+  {
+    "routeIndex": 2,
+    "file": "Art_120x150 Kopie.png",
+    "url": "/artworks/originals/painting-06.avif",
+    "size": [
+      1.2,
+      1.5
+    ],
+    "pixels": [
+      1229,
+      1536
+    ],
+    "bytes": 200843,
+    "avifQuality": 55,
+    "sourceSha256": "15732e4713992258f7c99dfc2d264098a8be764411443d2172cc04a9ddf1813c",
+    "sourceOrientation": "EXIF-transposed",
+    "cornerQuadNormalized": null,
+    "operations": "EXIF orientation, surrounding photo border removal and perspective correction only; no colour grading; entire canvas mapped"
+  },
+  {
+    "routeIndex": 9,
+    "file": "Bild_60x80.png",
+    "url": "/artworks/originals/painting-07.avif",
+    "size": [
+      0.6,
+      0.8
+    ],
+    "pixels": [
+      1152,
+      1536
+    ],
+    "bytes": 234502,
+    "avifQuality": 55,
+    "sourceSha256": "2a9e783597761d0ead6fe6b061eeceb2b6c2b84591ee19203ca90a7f8d9d613b",
+    "sourceOrientation": "EXIF-transposed",
+    "cornerQuadNormalized": null,
+    "operations": "EXIF orientation, surrounding photo border removal and perspective correction only; no colour grading; entire canvas mapped"
+  },
+  {
+    "routeIndex": 6,
+    "file": "BIld-30x40.saatchi Kopie.png",
+    "url": "/artworks/originals/painting-08.avif",
+    "size": [
+      0.3,
+      0.4
+    ],
+    "pixels": [
+      1152,
+      1536
+    ],
+    "bytes": 201419,
+    "avifQuality": 55,
+    "sourceSha256": "4c1ce8b7def70c811970e91bb1b1a083efc71ab3a079eb905c3b4e2942ddd881",
+    "sourceOrientation": "EXIF-transposed",
+    "cornerQuadNormalized": [
+      [
+        0.019867549668874173,
+        0.015
+      ],
+      [
+        0.9801324503311258,
+        0.01625
+      ],
+      [
+        0.9751655629139073,
+        0.985
+      ],
+      [
+        0.02152317880794702,
+        0.98875
+      ]
+    ],
+    "operations": "EXIF orientation, surrounding photo border removal and perspective correction only; no colour grading; entire canvas mapped"
+  },
+  {
+    "routeIndex": 7,
+    "file": "Blank canvas 09",
+    "size": [
+      0.9,
+      1.2
+    ],
+    "blank": true
+  },
+  {
+    "routeIndex": 8,
+    "file": "Blank canvas 10",
+    "size": [
+      0.9,
+      1.2
+    ],
+    "blank": true
+  }
+]
