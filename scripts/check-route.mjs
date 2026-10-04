@@ -13,3 +13,7 @@ for(const [from,to,label] of [[2,9,'06 to 07'],[6,7,'08 to 09']]){
  }
  console.log(JSON.stringify({transition:label,pass:true,maximumPitch}));
 }
+
+const opening=sampleRoute(0),ending=sampleRoute(duration);
+for(const field of ['position','target'])if(opening[field].some((v,i)=>Math.abs(v-ending[field][i])>1e-9))throw Error(`Ending ${field} must match opening view`);
+console.log(JSON.stringify({endingMatchesOpening:true}));
