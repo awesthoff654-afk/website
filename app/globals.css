@@ -24,7 +24,7 @@
 .intro button.intro-enter{inset:0;transform:none;width:100%;height:100%;border:0;padding:0;background:transparent;color:transparent;cursor:pointer}.intro button.intro-enter:focus-visible{outline:2px solid #ffffff90;outline-offset:-8px}
 
 /* Vector wordmark overlays the ready, stationary exhibition. */
-.brand img{inset:0;width:100%;height:100%;object-fit:contain;mix-blend-mode:normal}.intro{background:transparent;color:#000}.intro-wordmark{display:flex;align-items:center;justify-content:center}.intro-wordmark img{position:static;width:min(70vw,1100px);height:auto;max-height:60dvh;object-fit:contain;transform:none;filter:none;mix-blend-mode:normal}.intro button.intro-enter:focus-visible{outline-color:#0009}@media(max-width:700px){.brand img{inset:0;width:100%;height:100%}}
+.brand img{inset:0;width:100%;height:100%;object-fit:contain;mix-blend-mode:normal}.intro{background:transparent;color:#000}.intro-wordmark{display:flex;align-items:center;justify-content:center}.intro-wordmark img{position:static;width:min(70vw,1100px);height:auto;aspect-ratio:1893/672;max-height:60dvh;object-fit:contain;transform:none;filter:none;mix-blend-mode:normal}.intro button.intro-enter:focus-visible{outline-color:#0009}@media(max-width:700px){.brand img{inset:0;width:100%;height:100%}}
 
 .intro-background header,.intro-background .work,.intro-background footer,.intro-background .quiet-loading{visibility:hidden}
 
