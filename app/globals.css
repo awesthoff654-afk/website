@@ -51,3 +51,5 @@ footer{background:transparent;padding:22px 0 27px;gap:20px;flex-wrap:nowrap}.tra
 @media(max-width:700px){footer{margin:0 24px;padding:15px 0 20px;flex-wrap:wrap;gap:9px;background:transparent}.transport{width:100%;gap:13px}.timeline{flex:1;max-width:40vw;width:120px}.work{left:24px;bottom:125px}.work h2{font-size:19px}.mobile-works button,.mobile-works select{border:0;background:transparent;min-height:30px}.mobile-works label{font-size:10px}}
 
 html,body{background:#fff}.intro-background{background:#fff}.intro-background .quiet-loading{display:none}
+
+.intro button.intro-enter{z-index:1;touch-action:manipulation}.intro button.intro-enter:hover{opacity:1}.intro-wordmark{pointer-events:none}.intro-status{position:absolute;top:calc(50% + 90px);left:0;right:0;text-align:center;color:#53584f;font-size:12px;z-index:2;pointer-events:none}
