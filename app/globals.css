@@ -56,3 +56,5 @@ html,body{background:#fff}.intro-background{background:#fff}.intro-background .q
 
 @media(min-width:1051px){.route{gap:24px}}
 @media(min-width:701px) and (max-width:1050px){.route{gap:16px}}
+
+.intro a.intro-enter{position:absolute;inset:0;z-index:1;width:100%;height:100%;display:block;cursor:pointer;touch-action:manipulation;color:inherit;text-decoration:none}.intro a.intro-enter:hover{opacity:1}.intro a.intro-enter:focus-visible{outline:2px solid #0009;outline-offset:-8px}.intro a.intro-enter[aria-busy="true"] .intro-wordmark{opacity:.65;transition:opacity .15s}
