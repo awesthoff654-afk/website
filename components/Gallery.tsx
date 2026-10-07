@@ -90,8 +90,8 @@ function experimentalConcrete(source:THREE.Texture){
   const wx=-22.2+x/c.width*44.4,wz=-5.2+y/c.height*14.4;
   const cloud=noise(wx*.52+11,wz*.52+7)*.58+noise(wx*1.1+31,wz*1.1+15)*.28+noise(wx*2.8,wz*2.8)*.14;
   const corner=(cx:number,cz:number,sx:number,sz:number)=>Math.exp(-((wx-cx)**2/(sx*sx)+(wz-cz)**2/(sz*sz)));
-  const dark=.22*corner(-4,-3.8,1.4,1.3)+.19*corner(4.1,3.6,1.6,1.15)+.13*corner(1,-2.4,1.15,.9)+.18*corner(-5.8,8.2,2.3,.8);
-  const gain=.63+cloud*.75-dark;
+  const dark=.04*corner(-4,-3.8,1.4,1.3)+.055*corner(4.1,3.6,1.6,1.15)+.045*corner(1,-2.4,1.15,.9)+.055*corner(-5.8,8.2,2.3,.8);
+  const gain=Math.max(.79,.72+cloud*.55-dark);
   const k=(y*c.width+x)*4;
   data.data[k]=data.data[k]*gain;data.data[k+1]=data.data[k+1]*gain;data.data[k+2]=data.data[k+2]*gain;
  }
@@ -105,7 +105,7 @@ function SpaceScene({onSelect}:{onSelect:(index:number)=>void}){const plasterMap
   <Lightformer form="rect" intensity={1} position={[0,2,5]} rotation={[0,Math.PI,0]} scale={[3,3,1]}/>
  </Environment>
  <mesh rotation={[-Math.PI/2,0,0]} position={[0,-.005,0]}><primitive object={floorGeometry} attach="geometry"/>
- <MeshReflectorMaterial map={floorStudy} roughnessMap={floor.roughnessMap} resolution={768} blur={[24,12]} mixBlur={1} mixStrength={.33776875} mirror={.09934375} roughness={.3} metalness={0} depthScale={0} color="#e6e6e6"/>
+ <MeshReflectorMaterial map={floorStudy} roughnessMap={floor.roughnessMap} resolution={768} blur={[24,12]} mixBlur={1} mixStrength={.22} mixContrast={.2} mirror={.04} roughness={.4} metalness={0} depthScale={0} color="#e6e6e6"/>
 
  </mesh>
  {walls.map(w=><GalleryWall key={w.name} wall={w} plaster={plaster}/>)}
