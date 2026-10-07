@@ -7,3 +7,6 @@ export function sampleRoute(time:number):{position:number[];target:number[];artw
 export function collisionAt(p:number[],radius?:number):string[];
 
 export const closingView:{align:number;start:number;end:number;position:number[];target:number[]};
+
+export const phoneIntroDuration:number;
+export function samplePhoneRoute(time:number):ReturnType<typeof sampleRoute>;
