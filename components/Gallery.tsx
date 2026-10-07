@@ -79,7 +79,25 @@ function wallInkMaterial(surface:ReturnType<typeof useLocalSurface>){
 function EntranceText(){const font='/fonts/noto-sans-latin.ttf';const surface=useLocalSurface('plaster');const ink=useMemo(()=>wallInkMaterial(surface),[surface]);const headingGeometry=useMemo(()=>{const parsed=new SVGLoader().parse(westhoffHeading.svg);return mergeGeometries(parsed.paths.flatMap(path=>SVGLoader.createShapes(path).map(shape=>new THREE.ShapeGeometry(shape,48))))!;},[]);const introduction="Alexandra Westhoff is an artist from Luxembourg whose practice moves between art and architecture. Her work explores colour, surface and form, and how we experience them in a space.\n\nThis exhibition brings together a selection of her abstract paintings in a digital gallery. Layers of colour, expressive marks and textured surfaces give each work its own character. Seen together, the paintings invite a closer look at the relationships between gesture and composition, bold contrasts and quieter passages.\n\nWesthoff’s background in applied arts connects her artistic practice with an interest in form and human experience. Here, the gallery becomes part of that encounter: the distance between works, the changing viewpoints and the space around each painting shape how it is seen.\n\nMove through the rooms at your own pace. Notice where colours overlap, where a mark interrupts a surface, and how a composition changes as you approach it. Open an artwork to explore its details, then return to the gallery to see it in relation to the other works.";return <group position={[1.43,2.49,5.1805]}><mesh geometry={headingGeometry} material={ink} position={[0,0,.0008]} receiveShadow/>{[{text:introduction,y:-.24,size:.043}].map(({text,y,size})=><Text key={text} font={y===0?'/fonts/liberation-sans-bold.ttf':font} outlineWidth={0} outlineColor="#242622" fontSize={size} maxWidth={1.02} lineHeight={1.28} letterSpacing={y===0?.005:.008} anchorX="left" anchorY="top" position={[0,y,.0008]} color="#242622" sdfGlyphSize={256} receiveShadow><primitive object={ink} attach="material"/>{text}</Text>)}</group>;}
 function floorShape(){const shape=new THREE.Shape();const points=[[-5.2,-5.2],[5.2,-5.2],[5.2,4.98],[22.2,4.98],[22.2,9.2],[-22.2,9.2],[-22.2,4.98],[-5.2,4.98]];points.forEach(([x,z],i)=>i?shape.lineTo(x,-z):shape.moveTo(x,-z));shape.closePath();const g=new THREE.ShapeGeometry(shape),p=g.getAttribute('position'),uv=g.getAttribute('uv');for(let i=0;i<p.count;i++)uv.setXY(i,(p.getX(i)+22.2)/44.4,(p.getY(i)+9.2)/14.4);g.setAttribute('uv1',uv.clone());return g;}
 function FloorContactShadows(){const map=useMemo(()=>{const c=document.createElement('canvas');c.width=2048;c.height=664;const ctx=c.getContext('2d')!;const pixels=ctx.createImageData(c.width,c.height);for(let y=0;y<c.height;y++)for(let x=0;x<c.width;x++){const wx=-22.2+x/c.width*44.4,wz=-5.2+y/c.height*14.4;let shade=0;for(const w of walls){const dx=Math.max(w.min[0]-wx,0,wx-w.max[0]),dz=Math.max(w.min[2]-wz,0,wz-w.max[2]);const d=Math.hypot(dx,dz);shade=Math.max(shade,.25*Math.exp(-d/.16));}pixels.data[(y*c.width+x)*4+3]=Math.round(shade*255);}ctx.putImageData(pixels,0,0);const t=new THREE.CanvasTexture(c);t.flipY=true;return t;},[]);return <mesh rotation={[-Math.PI/2,0,0]} position={[0,.001,2]}><planeGeometry args={[44.4,14.4]}/><meshBasicMaterial map={map} transparent depthWrite={false} polygonOffset polygonOffsetFactor={-1}/></mesh>;}
-function SpaceScene({onSelect}:{onSelect:(index:number)=>void}){const plasterMaps=useLocalSurface('plaster');const plaster=useMemo(()=>new THREE.MeshStandardMaterial({...plasterMaps,color:'#ffffff',roughness:1,envMapIntensity:0,normalScale:new THREE.Vector2(.18,.18),emissive:'#ffffff',emissiveIntensity:.16}),[plasterMaps]);const floor=useLocalSurface('concrete');const floorGeometry=useMemo(floorShape,[]);return <>
+// Approved gray concrete finish with broad mineral variation in world coordinates.
+function experimentalConcrete(source:THREE.Texture){
+ const c=document.createElement('canvas');c.width=3072;c.height=996;const ctx=c.getContext('2d')!;
+ const tile=document.createElement('canvas');tile.width=144;tile.height=143;tile.getContext('2d')!.drawImage(source.image,0,0,144,143);ctx.fillStyle=ctx.createPattern(tile,'repeat')!;ctx.fillRect(0,0,c.width,c.height);
+ const data=ctx.getImageData(0,0,c.width,c.height);
+ const hash=(x:number,y:number)=>{const n=Math.sin(x*127.1+y*311.7+91.4)*43758.5453;return n-Math.floor(n);};
+ const noise=(x:number,y:number)=>{const ix=Math.floor(x),iy=Math.floor(y);let u=x-ix,v=y-iy;u=u*u*(3-2*u);v=v*v*(3-2*v);return (hash(ix,iy)*(1-u)+hash(ix+1,iy)*u)*(1-v)+(hash(ix,iy+1)*(1-u)+hash(ix+1,iy+1)*u)*v;};
+ for(let y=0;y<c.height;y++)for(let x=0;x<c.width;x++){
+  const wx=-22.2+x/c.width*44.4,wz=-5.2+y/c.height*14.4;
+  const cloud=noise(wx*.52+11,wz*.52+7)*.58+noise(wx*1.1+31,wz*1.1+15)*.28+noise(wx*2.8,wz*2.8)*.14;
+  const corner=(cx:number,cz:number,sx:number,sz:number)=>Math.exp(-((wx-cx)**2/(sx*sx)+(wz-cz)**2/(sz*sz)));
+  const dark=.22*corner(-4,-3.8,1.4,1.3)+.19*corner(4.1,3.6,1.6,1.15)+.13*corner(1,-2.4,1.15,.9)+.18*corner(-5.8,8.2,2.3,.8);
+  const gain=.63+cloud*.75-dark;
+  const k=(y*c.width+x)*4;
+  data.data[k]=data.data[k]*gain;data.data[k+1]=data.data[k+1]*gain;data.data[k+2]=data.data[k+2]*gain;
+ }
+ ctx.putImageData(data,0,0);const map=new THREE.CanvasTexture(c);map.colorSpace=THREE.SRGBColorSpace;map.anisotropy=16;return map;
+}
+function SpaceScene({onSelect}:{onSelect:(index:number)=>void}){const plasterMaps=useLocalSurface('plaster');const plaster=useMemo(()=>new THREE.MeshStandardMaterial({...plasterMaps,color:'#ffffff',roughness:1,envMapIntensity:0,normalScale:new THREE.Vector2(.18,.18),emissive:'#ffffff',emissiveIntensity:.16}),[plasterMaps]);const floor=useLocalSurface('concrete');const floorStudy=useMemo(()=>experimentalConcrete(floor.map),[floor.map]);const floorGeometry=useMemo(floorShape,[]);return <>
  <color attach="background" args={['#ededed']}/><fog attach="fog" args={['#ededed',30,90]}/>
  <hemisphereLight args={['#ffffff','#e8e9e6',.4]}/><ambientLight intensity={.1}/>
  <Environment resolution={256} frames={1}>
@@ -87,7 +105,7 @@ function SpaceScene({onSelect}:{onSelect:(index:number)=>void}){const plasterMap
   <Lightformer form="rect" intensity={1} position={[0,2,5]} rotation={[0,Math.PI,0]} scale={[3,3,1]}/>
  </Environment>
  <mesh rotation={[-Math.PI/2,0,0]} position={[0,-.005,0]}><primitive object={floorGeometry} attach="geometry"/>
- <MeshReflectorMaterial map={floor.map} roughnessMap={floor.roughnessMap} resolution={768} blur={[24,12]} mixBlur={1} mixStrength={.33776875} mirror={.09934375} roughness={.3} metalness={0} depthScale={0} color="#e6e6e6"/>
+ <MeshReflectorMaterial map={floorStudy} roughnessMap={floor.roughnessMap} resolution={768} blur={[24,12]} mixBlur={1} mixStrength={.33776875} mirror={.09934375} roughness={.3} metalness={0} depthScale={0} color="#e6e6e6"/>
 
  </mesh>
  {walls.map(w=><GalleryWall key={w.name} wall={w} plaster={plaster}/>)}
