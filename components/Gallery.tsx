@@ -105,7 +105,7 @@ function SpaceScene({onSelect}:{onSelect:(index:number)=>void}){const plasterMap
   <Lightformer form="rect" intensity={1} position={[0,2,5]} rotation={[0,Math.PI,0]} scale={[3,3,1]}/>
  </Environment>
  <mesh rotation={[-Math.PI/2,0,0]} position={[0,-.005,0]}><primitive object={floorGeometry} attach="geometry"/>
- <MeshReflectorMaterial map={floorStudy} roughnessMap={floor.roughnessMap} resolution={768} blur={[24,12]} mixBlur={1} mixStrength={.22} mixContrast={.2} mirror={.04} roughness={.4} metalness={0} depthScale={0} color="#e6e6e6"/>
+ <MeshReflectorMaterial map={floorStudy} roughnessMap={floor.roughnessMap} resolution={768} blur={[24,12]} mixBlur={1} mixStrength={.264} mixContrast={.2} mirror={.048} roughness={.4} metalness={0} depthScale={0} color="#e6e6e6"/>
 
  </mesh>
  {walls.map(w=><GalleryWall key={w.name} wall={w} plaster={plaster}/>)}
